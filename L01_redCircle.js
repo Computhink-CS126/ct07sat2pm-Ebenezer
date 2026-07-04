@@ -6,5 +6,5 @@ function setup(){
 function draw(){
     fill(255, 0, 0);
     ellipse(300,200,50,50);
-        fill()
+        fill(0,0,255);
 }
