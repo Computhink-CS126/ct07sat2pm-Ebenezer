@@ -9,5 +9,6 @@ function draw(){
         fill(0,0,255);
         ellipse(300,200,50,50);
 
-    fill()
+    fill(0,255,0)
+    
 }
