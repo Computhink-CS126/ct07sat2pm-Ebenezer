@@ -6,7 +6,7 @@ function setup() {
   ball = new Sprite();
   fill("skyblue")
   circle(0,0,50)
-  
+  s 
    // write your codes here
 
 }
