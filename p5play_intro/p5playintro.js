@@ -12,7 +12,9 @@ function setup() {
   rect(50,50, 30, 50)
    // write your codes here
   ball = new Sprite();
-  ball.x = 30
+  ball.x = 30;
+  ball.y = 30;
+  
 }
 
 function draw() {
