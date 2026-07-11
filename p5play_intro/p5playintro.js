@@ -28,8 +28,8 @@ function setup() {
   // ellipse(200, 300, 20, 50);
   // ellipse(200, 300, 20, 5);
   circle(200, 300, 140);
-  circle(130, 240, 40);
-  circle(270, 240, 40);
+  circle(130, 240, 45);
+  circle(270, 240, 45);
 }
 
 function draw() {
