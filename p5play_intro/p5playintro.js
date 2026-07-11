@@ -38,7 +38,7 @@ function setup() {
   circle(250, 175, 50);
   rect(175,220,50, 90);
   ellipse(215, 265, 5, 10);
-  // triangle(x1, y1, x2)
+  // triangle(x1, y1, x2, y2, x3, y3)
 }
 
 function draw() {
