@@ -18,7 +18,7 @@ function setup() {
   ball.y = 30;
   ball.diameter = 40;
   ball.color = 'red'
-  
+  box = new Sprite()
 }
 
 function draw() {
