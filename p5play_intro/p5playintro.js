@@ -30,7 +30,7 @@ function setup() {
   circle(200, 300, 140);
   circle(130, 240, 45);
   circle(270, 240, 45);
-  circle(165, 270)
+  circle(165, 270, 25);
 }
 
 function draw() {
