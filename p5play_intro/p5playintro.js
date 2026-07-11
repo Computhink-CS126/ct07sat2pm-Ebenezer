@@ -23,7 +23,7 @@ function setup() {
   // box.w = 50
   // box.h = 75
   // box.color = 'purple';
-  // ellipse(x,y,)
+  // ellipse(x,y,width,height)
 }
 
 function draw() {
