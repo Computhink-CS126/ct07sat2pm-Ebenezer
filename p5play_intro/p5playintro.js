@@ -8,13 +8,13 @@ function setup() {
   background(250); //background color
 
   ball = new Sprite();
-  fill("skyblue")
-  circle(25,25,50)
-  fill("cyan")
-  rect(50,50, 30, 50)
+  fill("skyblue");
+  circle(25,25,50);
+  fill("cyan");
+  rect(50,50, 30, 50);
    // write your codes here
   ball = new Sprite();
-  ball.x = 30;
+  ball.x = 60;
   ball.y = 30;
   ball.diameter = 40;
   ball.color = 'turquoise'
