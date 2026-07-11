@@ -29,5 +29,6 @@ function draw() {
   background(240);
 
   fill(0);
+  textSize(16);
   
 }
