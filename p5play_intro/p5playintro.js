@@ -36,7 +36,7 @@ function setup() {
   rect(100, 130, 200, 180);
   circle(150, 175, 50);
   circle(250, 175, 50);
-  rect(200, )
+  rect(200,220,)
 }
 
 function draw() {
