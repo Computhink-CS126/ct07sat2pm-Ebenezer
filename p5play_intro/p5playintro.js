@@ -32,7 +32,7 @@ function setup() {
   circle(270, 240, 45);
   circle(165, 270, 25);
   circle(235, 270, 25);
-  ellipse(200, 3)
+  ellipse(200, 335, )
 }
 
 function draw() {
