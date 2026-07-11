@@ -1,3 +1,5 @@
+const { isValidElement } = require("react");
+
 let ball;
 
 function setup() {
@@ -14,7 +16,8 @@ function setup() {
   ball = new Sprite();
   ball.x = 30;
   ball.y = 30;
-  
+  ball.diameter = 40;
+  ball.color = ''
 }
 
 function draw() {
