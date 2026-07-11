@@ -25,7 +25,7 @@ function setup() {
   // box.color = 'purple';
   // ellipse(x,y,width,height)
   ellipse(200, 300, 100, 50)
-  ellipse(200, 300, )
+  ellipse(200, 300, 20, 50)
 }
 
 function draw() {
