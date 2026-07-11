@@ -7,7 +7,7 @@ function setup() {
   fill("skyblue")
   circle(25,25,50)
   fill("cyan")
-  rect(25,25, 30, 50)
+  rect(50,50, 30, 50)
    // write your codes here
 
 }
