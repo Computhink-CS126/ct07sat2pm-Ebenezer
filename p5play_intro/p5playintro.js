@@ -21,7 +21,8 @@ function setup() {
   box = new Sprite();
   box.x = 
   box.y = 
-  box.
+  box.w
+  box.h
 }
 
 function draw() {
