@@ -1,4 +1,4 @@
-const { isValidElement } = require("react");
+let box;
 
 let ball;
 
