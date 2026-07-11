@@ -6,8 +6,6 @@ function setup() {
   // Set up the canvas
   new Canvas(400,600);
   background(250); //background color
-  fill(0);
-  textSize(16);
   ball = new Sprite();
   fill("skyblue");
   circle(25,25,50);
