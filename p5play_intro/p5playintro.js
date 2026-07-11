@@ -14,7 +14,7 @@ function setup() {
   rect(50,50, 30, 50);
    // write your codes here
   ball = new Sprite();
-  ball.x = 60;
+  ball.x = 360;
   ball.y = 30;
   ball.diameter = 40;
   ball.color = 'turquoise'
