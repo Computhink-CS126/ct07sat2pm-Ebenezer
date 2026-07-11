@@ -22,7 +22,8 @@ function setup() {
   box.x = 100
   box.y = 100
   box.w = 50
-  box.h = 
+  box.h = 75
+  box.color = 'purple';
 }
 
 function draw() {
