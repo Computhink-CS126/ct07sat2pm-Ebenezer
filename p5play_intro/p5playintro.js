@@ -4,7 +4,7 @@ function setup() {
   background(250); //background color
 
   ball = new Sprite();
-  CSSNumericValue(0,0,)
+ (0,0,50)
    // write your codes here
 
 }
