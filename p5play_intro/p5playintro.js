@@ -17,7 +17,7 @@ function setup() {
   ball.x = 30;
   ball.y = 30;
   ball.diameter = 40;
-  ball.color = ''
+  ball.color = 'turquoise'
 }
 
 function draw() {
