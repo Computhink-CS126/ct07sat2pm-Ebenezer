@@ -30,5 +30,5 @@ function draw() {
 
   fill(0);
   textSize(16);
-  text("Ball: (" + int(ball.x) + ", " )
+  text("Ball: (" + int(ball.x) + ", " + int(ball.y) )
 }
