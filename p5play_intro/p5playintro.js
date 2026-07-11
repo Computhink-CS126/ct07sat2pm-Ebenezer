@@ -11,7 +11,8 @@ function setup() {
   fill("cyan")
   rect(50,50, 30, 50)
    // write your codes here
-  ball = new Sprite()
+  ball = new Sprite();
+  ball.x = 30
 }
 
 function draw() {
