@@ -1,6 +1,6 @@
-let box;
+// let box;
 
-let ball;
+// let ball;
 
 function setup() {
   // Set up the canvas
