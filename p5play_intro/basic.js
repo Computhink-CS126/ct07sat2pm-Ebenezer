@@ -27,18 +27,19 @@ textSize(16)
   text(number, 300, 225);
   // --- Exercise: Age category classification ---
   // write your codes here
-  if (age <= 9){
-    console.log("Lower Primary")
-  }
-  else if(age <= 12) {
-    console.log("upper primary")
-  }
-  else {
-    console.log("secondary")
-  }
+  // if (age <= 9){
+  //   console.log("Lower Primary")
+  // }
+  // else if(age <= 12) {
+  //   console.log("upper primary")
+  // }
+  // else {
+  //   console.log("secondary")
+  // }
   // while (condition) {
   // action
   // }
+  
   // --- Exercise: Display odd numbers backward using while loop ---
   // write your codes here
 
