@@ -28,7 +28,7 @@ textSize(16)
   // --- Exercise: Age category classification ---
   // write your codes here
   if (age <= 9){
-    
+    console.log("")
   }
   // --- Exercise: Display odd numbers backward using while loop ---
   // write your codes here
