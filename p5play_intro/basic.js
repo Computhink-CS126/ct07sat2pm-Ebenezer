@@ -14,7 +14,7 @@ console.log("The area of the triangle:", area);
   // write your codes here
 text("The area of the triangles is:" + area,300,200);
 for (let i = 1; 1<=10; i++) {
-  console.log(counting)
+  console.log("Counting..." + i)
 }
   // --- Exercise: Age category classification ---
   // write your codes here
