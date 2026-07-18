@@ -47,6 +47,8 @@ textSize(16)
   console.log(groceries)
   groceries.push("orange")
   groceries.push("butter")
+  groceries.shift();
+  
   // --- Exercise: Display odd numbers backward using while loop ---
   // write your codes here
 
