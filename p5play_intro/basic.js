@@ -1,13 +1,13 @@
 let base = 10;
 let height = 5;
-let Area;
+let area;
 function setup() {
   // write your codes here
 new canvas(800, 400);
 background(220);
   // --- Exercise: Area of Triangle ---
   // write your codes here
-Area = 0.5 * base * height;
+area = 0.5 * base * height;
 console.log("The area of the triangle:", area);
   // --- Exercise: Sum of first 10 even numbers ---
   // write your codes here
