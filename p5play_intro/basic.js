@@ -12,7 +12,7 @@ area = 0.5 * base * height;
 console.log("The area of the triangle:", area);
   // --- Exercise: Sum of first 10 even numbers ---
   // write your codes here
-text("The area of the triangles is:" + area)
+text("The area of the triangles is:" + area,300,200);
   // --- Exercise: Age category classification ---
   // write your codes here
 
