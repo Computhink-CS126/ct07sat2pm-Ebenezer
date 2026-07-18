@@ -23,7 +23,7 @@ textSize(16)
     }
   }
   console.log(number);
-  text(number, 6300, 225);
+  text(number, 300, 225);
   // --- Exercise: Age category classification ---
   // write your codes here
 
