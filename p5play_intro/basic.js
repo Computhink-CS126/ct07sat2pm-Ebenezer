@@ -39,10 +39,11 @@ textSize(16)
   // while (condition) {
   // action
   // }
-  let i = 19;
-  while (i != 1) {
-    console.log()
-  }
+  // let i = 19;
+  // while (i != 1) {
+  //   console.log()
+  // }
+  let
   // --- Exercise: Display odd numbers backward using while loop ---
   // write your codes here
 
