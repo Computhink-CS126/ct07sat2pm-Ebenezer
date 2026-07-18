@@ -36,7 +36,9 @@ textSize(16)
   else {
     console.log("secondary")
   }
-  ?
+  // while (condition) {
+  // action
+  // }
   // --- Exercise: Display odd numbers backward using while loop ---
   // write your codes here
 
