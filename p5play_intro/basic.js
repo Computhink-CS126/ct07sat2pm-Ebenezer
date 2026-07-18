@@ -39,6 +39,7 @@ textSize(16)
   // while (condition) {
   // action
   // }
+  let i = 19
   while (i != 1) {
     
   }
