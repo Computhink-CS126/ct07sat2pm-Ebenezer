@@ -48,7 +48,7 @@ textSize(16)
   groceries.push("orange");
   groceries.push("butter");
   groceries.shift();
-  groceries.splife
+  groceries.splife(1,1,kaya)
   // --- Exercise: Display odd numbers backward using while loop ---
   // write your codes here
 
