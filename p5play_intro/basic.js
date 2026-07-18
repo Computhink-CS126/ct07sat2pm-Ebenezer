@@ -8,14 +8,15 @@ background(220);
 textSize(16)
   // --- Exercise: Area of Triangle ---
   // write your codes here
-area = 0.5 * base * height;
-console.log("The area of the triangle:", area);
-  // --- Exercise: Sum of first 10 even numbers ---
-  // write your codes here
-text("The area of the triangles is:" + area,300,200);
-for (let i = 1; 1<=10; i++) {
-  console.log("Counting..." + i);
-}
+// area = 0.5 * base * height;
+// console.log("The area of the triangle:", area);
+//   // --- Exercise: Sum of first 10 even numbers ---
+//   // write your codes here
+// text("The area of the triangles is:" + area,300,200);
+// for (let i = 1; 1<=10; i++) {
+//   console.log("Counting..." + i);
+// }
+
   // --- Exercise: Age category classification ---
   // write your codes here
 
