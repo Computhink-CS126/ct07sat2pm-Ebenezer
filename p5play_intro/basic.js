@@ -20,7 +20,8 @@ textSize(16)
   for (let i = 2; 1 > 20 ; i + 2) {
     number = number + i
   }
-  console.log()
+  console.log(number)
+  text
   // --- Exercise: Age category classification ---
   // write your codes here
 
