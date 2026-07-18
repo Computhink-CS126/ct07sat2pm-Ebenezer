@@ -39,7 +39,9 @@ textSize(16)
   // while (condition) {
   // action
   // }
-  
+  while (i != 1) {
+    
+  }
   // --- Exercise: Display odd numbers backward using while loop ---
   // write your codes here
 
