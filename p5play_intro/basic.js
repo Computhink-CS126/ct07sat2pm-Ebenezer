@@ -1,3 +1,6 @@
+let base = 10;
+let height = 5;
+let Area
 function setup() {
   // write your codes here
 new canvas(800, 400)
