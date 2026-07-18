@@ -4,7 +4,7 @@ new canvas(800, 400)
 background(220)
   // --- Exercise: Area of Triangle ---
   // write your codes here
-
+let base = 
   // --- Exercise: Sum of first 10 even numbers ---
   // write your codes here
 
