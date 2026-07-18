@@ -13,6 +13,9 @@ console.log("The area of the triangle:", area);
   // --- Exercise: Sum of first 10 even numbers ---
   // write your codes here
 text("The area of the triangles is:" + area,300,200);
+for (let i = 1; 1<=10; i++) {
+  
+}
   // --- Exercise: Age category classification ---
   // write your codes here
 
