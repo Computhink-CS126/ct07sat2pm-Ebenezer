@@ -18,7 +18,8 @@ textSize(16)
 //   console.log("Counting..." + i);
 // }
   for (let i = 0; 1 <= 20 ; ++i) {
-    number = number + i
+    if(i%2==0)
+      sum
   }
   console.log(number);
   text(number, 600, 400);
