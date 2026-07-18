@@ -18,7 +18,7 @@ textSize(16)
 //   console.log("Counting..." + i);
 // }
   for (let i = 2; 1 > 20 ; i + 2) {
-    
+    number = number + i
   }
   // --- Exercise: Age category classification ---
   // write your codes here
