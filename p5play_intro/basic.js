@@ -44,7 +44,7 @@ textSize(16)
   //   console.log()
   // }
   let groceries = ["apple", "bread", "milk"]
-  
+  console.log(gro)
   // --- Exercise: Display odd numbers backward using while loop ---
   // write your codes here
 
