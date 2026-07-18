@@ -17,7 +17,7 @@ textSize(16)
 // for (let i = 1; 1<=10; i++) {
 //   console.log("Counting..." + i);
 // }
-  for (let i = 0; 1 > 20 ; i += 2) {
+  for (let i = 0; 1 <= 20 ; i += 2) {
     number = number + i
   }
   console.log(number);
