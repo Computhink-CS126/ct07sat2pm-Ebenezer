@@ -31,8 +31,9 @@ textSize(16)
     console.log("Lower Primary")
   }
   else if(age <= 12) {
-    console.log("upper ")
+    console.log("upper primary")
   }
+  else con
   // --- Exercise: Display odd numbers backward using while loop ---
   // write your codes here
 
