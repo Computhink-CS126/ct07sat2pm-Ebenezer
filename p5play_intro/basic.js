@@ -21,7 +21,7 @@ textSize(16)
     number = number + i
   }
   console.log(number)
-  text
+  text(number, 600, 400)
   // --- Exercise: Age category classification ---
   // write your codes here
 
