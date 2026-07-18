@@ -7,9 +7,7 @@ new canvas(800, 400)
 background(220)
   // --- Exercise: Area of Triangle ---
   // write your codes here
-let base = 10;
-let height = 5;
-let Area
+area = 0.5 * base * height
 console.log("The area of the triangle:", area);
   // --- Exercise: Sum of first 10 even numbers ---
   // write your codes here
