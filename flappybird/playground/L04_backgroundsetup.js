@@ -3,12 +3,14 @@ let midflapimg, bg, base;
 let flapUpImg, flapDownImg;
 let pipeGroup;
 let pipe;
+let bottomPipe;
 function preload() {
     midflapimg = loadImage('assets/redbird-midflap.png');
     bg = loadImage('assets/background-night.png');
     base = loadImage('assets/base.png');
     flapUpImg = loadImage('assets/yellowbird-upflap.png')
     flapDownImg = loadImage('assets/yellowbird-downflap.png')
+    
 }
 function setup(){
     createCanvas(400,600);
