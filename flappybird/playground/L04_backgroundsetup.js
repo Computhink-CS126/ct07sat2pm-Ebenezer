@@ -55,4 +55,7 @@ function draw(){
         bird.img = midflapimg;
         bird.rotation = 0;
     }
+    if (frameCount === 1) {
+        
+    }
 }
