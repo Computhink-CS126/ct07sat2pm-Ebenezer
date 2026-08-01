@@ -19,9 +19,10 @@ function setup(){
     bird.drag = 0.02;
     bird.bounciness = 0.05;
     world.gravity.y = 10;
-    floor = new Sprite()
-    floor.x = 200
-    floor.y = height 
+    floor = new Sprite();
+    floor.x = 200;
+    floor.y = height - 20;
+    
 }
 function draw(){
     Image(bg,0,0,width,height)
