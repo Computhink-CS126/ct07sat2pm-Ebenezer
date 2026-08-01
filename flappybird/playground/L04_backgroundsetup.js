@@ -1,7 +1,7 @@
 let bird, floor;
 let midflapimg, bg, base;
 let flapUpImg, flapDownImg;
-let 
+let pipeGroup;
 function preload() {
     midflapimg = loadImage('assets/redbird-midflap.png');
     bg = loadImage('assets/background-night.png');
@@ -30,6 +30,7 @@ function setup(){
     floor.height = 125;
     floor.collider = 'static';
     floor.img = base;
+    
 }
 function draw(){
     image(bg,0,0,width,height);
