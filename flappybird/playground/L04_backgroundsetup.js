@@ -19,6 +19,7 @@ function setup(){
     bird.drag = 0.02;
     bird.bounciness = 0.05;
     world.gravity.y = 10;
+    
 }
 function draw(){
     Image(bg,0,0,width,height)
