@@ -5,7 +5,7 @@ function preload() {
     midflapimg = loadImage('assets/redbird-midflap.png');
     bg = loadImage('assets/background-night.png');
     base = loadImage('assets/base.png');
-    flapUpImg = loadImage('asset')
+    flapUpImg = loadImage('asset/yellowbird-upflap')
 }
 function setup(){
     createCanvas(400,600);
