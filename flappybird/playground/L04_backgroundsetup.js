@@ -46,6 +46,7 @@ function draw(){
         bird.rotation = -10;
     }
     else if (bird.vel.y > 1) {
-        bird.img
+        bird.img = flapDownImg;
+        
     }
 }
