@@ -50,6 +50,7 @@ function draw(){
         bird.rotation = 30;
     }
     else {
-        bird.img = flapMid
+        bird.img = flapMidimage;
+        bird.rotation
     }
 }
