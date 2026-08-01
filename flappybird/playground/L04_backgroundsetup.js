@@ -59,3 +59,6 @@ function draw(){
         spawnPipePair();
     }
 }
+function spawnPipePair(){
+    
+}
