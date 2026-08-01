@@ -2,6 +2,7 @@ let bird, floor;
 let midflapimg, bg, base;
 let flapUpImg, flapDownImg;
 let pipeGroup;
+let pipe;
 function preload() {
     midflapimg = loadImage('assets/redbird-midflap.png');
     bg = loadImage('assets/background-night.png');
@@ -60,5 +61,5 @@ function draw(){
     }
 }
 function spawnPipePair(){
-    
+
 }
