@@ -1,9 +1,11 @@
 let bird, floor;
 let midflapimg, bg, base;
+let flapUpImg, flapDownImg;
 function preload() {
     midflapimg = loadImage('assets/redbird-midflap.png');
     bg = loadImage('assets/background-night.png');
     base = loadImage('assets/base.png');
+    flapUpImg = loadImage('asset')
 }
 function setup(){
     createCanvas(400,600);
