@@ -10,7 +10,7 @@ function preload() {
     base = loadImage('assets/base.png');
     flapUpImg = loadImage('assets/yellowbird-upflap.png')
     flapDownImg = loadImage('assets/yellowbird-downflap.png')
-    pipe = loadImage()
+    pipe = loadImage('assets/ pipe-green')
 }
 function setup(){
     createCanvas(400,600);
