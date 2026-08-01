@@ -23,7 +23,8 @@ function setup(){
     floor.x = 200;
     floor.y = height - 20;
     floor.width = 400;
-    floor.height = 1254
+    floor.height = 125;
+    floor.collidar = "static"
 }
 function draw(){
     Image(bg,0,0,width,height)
