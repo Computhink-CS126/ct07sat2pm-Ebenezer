@@ -81,7 +81,7 @@ function draw(){
         }
     }
     bird.x += 3;
-    
+    camera.x = bird
 }
 function drawScore(x, y, score, digitWidth, digitHeight) {
     scoreDigits.removeAll();
