@@ -85,7 +85,7 @@ function drawScore(x, y, score, digitWidth, digitHeight) {
         digitSprite.img = numberImages[digit];
     }
     moveGroup(scoreDigits, camera.x, 24);
-    
+
 }
 function spawnPipePair(){
     let gap = 50;
@@ -98,4 +98,7 @@ function spawnPipePair(){
     topPipe.img = pipe;
     topPipe.rotation = 180;
     pipeGroup.add(topPipe);
+}
+function moveGroup(group, targetX, spacing) {
+    
 }
