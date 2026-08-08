@@ -100,5 +100,5 @@ function spawnPipePair(){
     pipeGroup.add(topPipe);
 }
 function moveGroup(group, targetX, spacing) {
-    
+    let totalWidth = (group.length)
 }
