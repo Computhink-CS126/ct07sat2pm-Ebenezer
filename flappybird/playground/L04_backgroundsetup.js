@@ -75,4 +75,4 @@ function spawnPipePair(){
     pipeGroup.add(topPipe);
 }
 let score = 0;
-let number Images = [];
+let numberImages = [];
