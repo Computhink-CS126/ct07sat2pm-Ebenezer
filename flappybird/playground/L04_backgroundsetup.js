@@ -7,9 +7,6 @@ let bottomPipe;
 let score = 0;
 let numberImages = [];
 let scoreDigits;
-function preload() {
-
-}
 
 function preload() {
     midflapimg = loadImage('assets/redbird-midflap.png');
@@ -18,6 +15,9 @@ function preload() {
     flapUpImg = loadImage('assets/yellowbird-upflap.png')
     flapDownImg = loadImage('assets/yellowbird-downflap.png')
     pipe = loadImage('assets/ pipe-green.png');
+    for(let i = 0; i < 10; i++) {
+        numberImages[i] = loadImage('assets/' + i + '.png');
+    }
 }
 function setup(){
     createCanvas(400,600);
