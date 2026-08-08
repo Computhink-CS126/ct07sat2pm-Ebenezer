@@ -19,6 +19,7 @@ function preload() {
     for(let i = 0; i < 10; i++) {
         numberImages[i] = loadImage('assets/' + i + '.png');
     }
+    
 }
 function setup(){
     createCanvas(400,600);
