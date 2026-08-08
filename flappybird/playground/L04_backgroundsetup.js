@@ -91,6 +91,9 @@ function draw(){
             pipe.remove();
         }
     }
+    if (bird.collides(pipeGroup) || bird.collides(floor) || bird.y < - 30){
+        
+    }
 }
 function drawScore(x, y, score, digitWidth, digitHeight) {
     scoreDigits.removeAll();
