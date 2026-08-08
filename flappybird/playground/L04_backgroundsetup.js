@@ -19,7 +19,7 @@ function preload() {
     for(let i = 0; i < 10; i++) {
         numberImages[i] = loadImage('assets/' + i + '.png');
     }
-    
+    gameoverImg = loadImage
 }
 function setup(){
     createCanvas(400,600);
