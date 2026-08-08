@@ -75,7 +75,7 @@ function draw(){
 }
 function drawScore(x, y, score, digitWidth, digitHeight) {
     scoreDigits.removeAll()
-    let scoreStr =
+    let scoreStr = str(score)
 }
 function spawnPipePair(){
     let gap = 50;
