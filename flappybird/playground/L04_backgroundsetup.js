@@ -108,7 +108,7 @@ function drawScore(x, y, score, digitWidth, digitHeight) {
 }
 function spawnPipePair(){
     let gap = 50;
-    let midY = height/2;
+    let midY = random(250, height - )
     bottomPipe = new Sprite(bird.x + 400, midY + gap / 2 + 200, 52 , 320, 'static');
     bottomPipe.img = pipe;
     pipeGroup.add(bottomPipe);
@@ -118,7 +118,7 @@ function spawnPipePair(){
     topPipe.rotation = 180;
     topPipe.passed=false;
     pipeGroup.add(topPipe);
-    
+
 }
 function moveGroup(group, targetX, spacing) {
     let totalWidth = (group.length -1) * spacing;
