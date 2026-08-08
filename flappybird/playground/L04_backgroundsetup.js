@@ -118,7 +118,6 @@ function spawnPipePair(){
     topPipe.rotation = 180;
     topPipe.passed=false;
     pipeGroup.add(topPipe);
-    topPipe = new Sprite(bird.x + 4)
 }
 function moveGroup(group, targetX, spacing) {
     let totalWidth = (group.length -1) * spacing;
