@@ -80,6 +80,8 @@ function draw(){
             score++;
         }
     }
+    bird.x += 3;
+    
 }
 function drawScore(x, y, score, digitWidth, digitHeight) {
     scoreDigits.removeAll();
