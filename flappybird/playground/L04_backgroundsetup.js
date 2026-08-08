@@ -81,7 +81,8 @@ function drawScore(x, y, score, digitWidth, digitHeight) {
     for (let i = 0 ; i< scoreStr.length;i++){
         let digit = int(scoreStr[i]);
         let xPos = startX + i * digitWidth;
-        let digitSprite = new scoreDigits.Sprite(xPos, y, digitWidth,digit)
+        let digitSprite = new scoreDigits.Sprite(xPos, y, digitWidth,digitHeight);
+        digitSprite
     }
 }
 function spawnPipePair(){
