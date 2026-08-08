@@ -74,3 +74,4 @@ function spawnPipePair(){
     topPipe.rotation = 180;
     pipeGroup.add(topPipe);
 }
+let score = 0;
