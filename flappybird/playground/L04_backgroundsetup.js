@@ -72,6 +72,9 @@ function draw(){
         spawnPipePair();
     }
     draw(width/2, 20, score, 24,36);
+    for (let pipe of pipeGroup) {
+        letpipe
+    }
 }
 function drawScore(x, y, score, digitWidth, digitHeight) {
     scoreDigits.removeAll();
