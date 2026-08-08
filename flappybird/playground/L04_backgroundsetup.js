@@ -73,7 +73,8 @@ function draw(){
     }
     draw(width/2, 20, score, 24,36);
     for (let pipe of pipeGroup) {
-        let pipeRightEdge = pipe.x + 
+        let pipeRightEdge = pipe.x + pipe.w / 2;
+        
     }
 }
 function drawScore(x, y, score, digitWidth, digitHeight) {
