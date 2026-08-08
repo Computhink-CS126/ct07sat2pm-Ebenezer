@@ -82,3 +82,6 @@ function preload() {
         numberImages[i] = loadImage('assets/' + i + '.png');
     }
 }
+function setup(){
+    
+}
