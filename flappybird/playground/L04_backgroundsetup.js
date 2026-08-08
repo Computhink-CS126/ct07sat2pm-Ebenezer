@@ -118,6 +118,7 @@ function spawnPipePair(){
     topPipe.rotation = 180;
     topPipe.passed=false;
     pipeGroup.add(topPipe);
+    
 }
 function moveGroup(group, targetX, spacing) {
     let totalWidth = (group.length -1) * spacing;
