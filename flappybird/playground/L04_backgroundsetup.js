@@ -91,6 +91,7 @@ function draw(){
             pipe.remove();
         }
     }
+    topPipe = new Sprite(bird.x + 4)
 }
 function drawScore(x, y, score, digitWidth, digitHeight) {
     scoreDigits.removeAll();
