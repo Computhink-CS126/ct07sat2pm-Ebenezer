@@ -41,6 +41,7 @@ function setup(){
     floor.collider = 'static';
     floor.img = base;
     pipeGroup = new Group();
+    scoreDigits = 
 }
 function draw(){
     image(bg,0,0,width,height);
