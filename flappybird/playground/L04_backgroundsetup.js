@@ -77,3 +77,8 @@ function spawnPipePair(){
 let score = 0;
 let numberImages = [];
 let scoreDigits;
+function preload() {
+    for(let i = 0; i < 10; i++) {
+        
+    }
+}
