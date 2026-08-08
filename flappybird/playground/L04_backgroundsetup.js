@@ -4,6 +4,13 @@ let flapUpImg, flapDownImg;
 let pipeGroup;
 let pipe;
 let bottomPipe;
+let score = 0;
+let numberImages = [];
+let scoreDigits;
+function preload() {
+
+}
+
 function preload() {
     midflapimg = loadImage('assets/redbird-midflap.png');
     bg = loadImage('assets/background-night.png');
