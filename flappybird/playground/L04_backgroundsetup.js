@@ -74,14 +74,3 @@ function spawnPipePair(){
     topPipe.rotation = 180;
     pipeGroup.add(topPipe);
 }
-let score = 0;
-let numberImages = [];
-let scoreDigits;
-function preload() {
-    for(let i = 0; i < 10; i++) {
-        numberImages[i] = loadImage('assets/' + i + '.png');
-    }
-}
-function setup(){
-    
-}
