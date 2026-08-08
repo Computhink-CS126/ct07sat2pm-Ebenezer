@@ -96,7 +96,9 @@ function draw(){
     if (bird.collides(pipeGroup) || bird.collides(floor) || bird.y < - 30){
         noLoop;
     }
-    if (bird.collides(pipeGroup) || bird.collides(floor))
+    if (bird.collides(pipeGroup) || bird.collides(floor)){
+        gameover
+    }
 }
 function drawScore(x, y, score, digitWidth, digitHeight) {
     scoreDigits.removeAll();
