@@ -79,6 +79,6 @@ let numberImages = [];
 let scoreDigits;
 function preload() {
     for(let i = 0; i < 10; i++) {
-        numberImages[i]
+        numberImages[i] = loadImage('assets/')
     }
 }
