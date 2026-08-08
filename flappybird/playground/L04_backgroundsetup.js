@@ -71,11 +71,12 @@ function draw(){
     if (frameCount === 1) {
         spawnPipePair();
     }
-    draw(width/2, 20, score, 24,36)
+    draw(width/2, 20, score, 24,36);
 }
 function drawScore(x, y, score, digitWidth, digitHeight) {
-    scoreDigits.removeAll()
-    let scoreStr = str(score)
+    scoreDigits.removeAll();
+    let scoreStr = str(score);
+    let totalWidth 
 }
 function spawnPipePair(){
     let gap = 50;
