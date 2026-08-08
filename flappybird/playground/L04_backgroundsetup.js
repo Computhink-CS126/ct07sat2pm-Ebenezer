@@ -84,8 +84,9 @@ function draw(){
     camera.x = bird.x;
     floor.x = bird.x;
     if (frameCount % 90 === 0) {
-        spawnPipePair
+        spawnPipePair();
     }
+    for(let pipe of pipeGroup)
 }
 function drawScore(x, y, score, digitWidth, digitHeight) {
     scoreDigits.removeAll();
