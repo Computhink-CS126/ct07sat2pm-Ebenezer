@@ -76,3 +76,4 @@ function spawnPipePair(){
 }
 let score = 0;
 let numberImages = [];
+let scoreDigits;
