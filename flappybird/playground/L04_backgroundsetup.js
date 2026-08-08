@@ -86,7 +86,9 @@ function draw(){
     if (frameCount % 90 === 0) {
         spawnPipePair();
     }
-    for(let pipe of pipeGroup){}
+    for(let pipe of pipeGroup){
+        if (pipe.x < - 50)
+    }
 }
 function drawScore(x, y, score, digitWidth, digitHeight) {
     scoreDigits.removeAll();
