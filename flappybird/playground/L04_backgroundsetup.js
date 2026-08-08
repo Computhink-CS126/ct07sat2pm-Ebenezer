@@ -84,7 +84,8 @@ function drawScore(x, y, score, digitWidth, digitHeight) {
         let digitSprite = new scoreDigits.Sprite(xPos, y, digitWidth,digitHeight);
         digitSprite.img = numberImages[digit];
     }
-    moveGroup(scoreDigits, camera.x)
+    moveGroup(scoreDigits, camera.x, 24);
+    
 }
 function spawnPipePair(){
     let gap = 50;
