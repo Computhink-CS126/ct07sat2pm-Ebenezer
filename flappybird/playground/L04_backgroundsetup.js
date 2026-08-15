@@ -49,7 +49,7 @@ function setup(){
     scoreDigits = new Group()
     scoreDigits.collider = 'none'
     scoreDigits.layer = 1000;
-    startScreenLabel = new Sprite(width/2, height/2)
+    startScreenLabel = new Sprite(width/2, height/2, 50, 50, 'none');
 }
 function draw(){
     image(bg,0,0,width,height);
