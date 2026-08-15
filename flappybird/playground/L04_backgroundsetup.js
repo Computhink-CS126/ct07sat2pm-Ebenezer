@@ -87,6 +87,9 @@ function draw(){
             pipe.passed = true;
             score++;
         }
+        if (kb.presses('space') || mouse.presses()) {
+            
+        }
     }
     bird.x += 3;
     camera.x = bird.x;
