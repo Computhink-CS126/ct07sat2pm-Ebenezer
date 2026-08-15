@@ -22,7 +22,7 @@ function preload() {
         numberImages[i] = loadImage('assets/' + i + '.png');
     }
     gameoverImg = loadImage('assets/gameover.png');
-    startScreenImg = loadImage('')
+    startScreenImg = loadImage('assets/message.png');
 }
 function setup(){
     createCanvas(400,600);
