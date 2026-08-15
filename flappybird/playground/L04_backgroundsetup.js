@@ -13,7 +13,7 @@ let toppipe,bottomPipe;
 let startScreenLabel;
 let startScreenImg;
 let startGame = false;
-
+let flapSound, point
 function preload(){
 gameoverImg = loadImage('assets/gameover.png');
 midflaping = loadImage('assets/redbird-midflap.png');
