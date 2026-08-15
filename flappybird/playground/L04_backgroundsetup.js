@@ -109,6 +109,9 @@ function draw(){
         startGame = true;
         startScreenLabel.visible = false;
     }
+    if (startGame){
+        
+    }
 }
 function drawScore(x, y, score, digitWidth, digitHeight) {
     scoreDigits.removeAll();
