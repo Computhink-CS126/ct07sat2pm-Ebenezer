@@ -105,12 +105,9 @@ function draw(){
     if (bird.collides(pipeGroup) || bird.collides(floor)){
         gameover
     }
-    if (kb.presses('space') || mouse.presses()) {
-        startGame = true;
-        startScreenLabel.visible = false;
-    }
+    
     if (startGame){
-        
+
     }
 }
 function drawScore(x, y, score, digitWidth, digitHeight) {
