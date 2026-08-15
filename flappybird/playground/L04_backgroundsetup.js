@@ -28,7 +28,7 @@ numberImages[i] = loadImage('assets/' + i +'.png');
 startScreenImg = loadImage('assets/message.png');
 flapSound = createAudio('assets/sfx_wing.mp3');
 pointSound = createAudio('assets/sfx_point.mp3');
-failSound = createAudio
+failSound = createAudio('assets/sfx_die.mp3')
 }
 
 function setup(){
