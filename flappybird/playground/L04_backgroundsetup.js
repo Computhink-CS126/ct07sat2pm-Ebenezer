@@ -88,7 +88,8 @@ function draw(){
             score++;
         }
         if (kb.presses('space') || mouse.presses()) {
-            
+            startGame = true;
+            startScreenLabel
         }
     }
     bird.x += 3;
