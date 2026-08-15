@@ -89,7 +89,7 @@ function draw(){
         }
         if (kb.presses('space') || mouse.presses()) {
             startGame = true;
-            startScreenLabel
+            startScreenLabel.visible = false;
         }
     }
     bird.x += 3;
