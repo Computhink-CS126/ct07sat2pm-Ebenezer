@@ -9,6 +9,7 @@ let numberImages = [];
 let scoreDigits;
 let gameoverImg;
 let gameoverLabel;
+let start
 function preload() {
     midflapimg = loadImage('assets/redbird-midflap.png');
     bg = loadImage('assets/background-night.png');
