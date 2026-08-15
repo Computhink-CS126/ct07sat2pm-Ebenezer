@@ -22,6 +22,7 @@ function preload() {
         numberImages[i] = loadImage('assets/' + i + '.png');
     }
     gameoverImg = loadImage('assets/gameover.png');
+    startScreenImg = loadImage('')
 }
 function setup(){
     createCanvas(400,600);
