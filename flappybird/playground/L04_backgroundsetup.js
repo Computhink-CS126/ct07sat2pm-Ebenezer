@@ -26,7 +26,8 @@ for (let i = 0; i < 10; i++){
 numberImages[i] = loadImage('assets/' + i +'.png');
 }
 startScreenImg = loadImage('assets/message.png');
-flapSound = createAudio('assets/sfx_')
+flapSound = createAudio('assets/sfx_wing.mp3');
+
 }
 
 function setup(){
