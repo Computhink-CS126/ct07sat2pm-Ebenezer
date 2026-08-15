@@ -112,6 +112,7 @@ function draw(){
     if (bird.collides(pipeGroup) || bird.collides(floor)){
         gameover
     }
+    
     }
 }
 function drawScore(x, y, score, digitWidth, digitHeight) {
