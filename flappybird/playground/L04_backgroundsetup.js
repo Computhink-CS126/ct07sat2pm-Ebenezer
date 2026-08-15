@@ -49,6 +49,7 @@ function setup(){
     scoreDigits = new Group()
     scoreDigits.collider = 'none'
     scoreDigits.layer = 1000;
+    
 }
 function draw(){
     image(bg,0,0,width,height);
