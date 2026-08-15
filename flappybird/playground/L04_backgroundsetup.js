@@ -87,10 +87,6 @@ function draw(){
             pipe.passed = true;
             score++;
         }
-        if (kb.presses('space') || mouse.presses()) {
-            startGame = true;
-            startScreenLabel.visible = false;
-        }
     }
     bird.x += 3;
     camera.x = bird.x;
