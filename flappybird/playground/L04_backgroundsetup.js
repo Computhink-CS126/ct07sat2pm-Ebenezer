@@ -11,6 +11,7 @@ let gameoverImg;
 let gameoverLabel;
 let startScreenLabel;
 let startScreenImg;
+let 
 function preload() {
     midflapimg = loadImage('assets/redbird-midflap.png');
     bg = loadImage('assets/background-night.png');
