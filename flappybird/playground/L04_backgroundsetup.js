@@ -124,19 +124,38 @@ let birdLeftEdge = bird.x - bird.w / 2;
 
 if (pipe.passed == false && pipeRightEdge < birdLeftEdge){
 pipe.passed = true;
+pointSound.play();
 score++;
+
 }
 }
 
 
 
 if (bird.collides(pipeGroup) || bird.collides(floor)){
+failSound.play();
 gameoverLabel = new Sprite(width/2, height/2, 192, 42);
 gameoverLabel.img = gameoverImg;
 gameoverLabel.layer = 100;
 gameoverLabel.x = camera.x;
 
 noLoop();
+setTimeout(() => {
+    score = 0;
+    startGame;
+    startGame = false;
+    pipes.removeAll();
+    bird.vel.x = 0;
+    bird.vel.x = 0;
+    bird.rotation = 0;
+    bird.collider = 'static'
+    bird.y =200;
+    gameoverLabel.remove();
+    startMessageLabel.visible = true;
+    startMessageLabel.x = bird.x
+    startMessageLabel.y = height/2-50;
+    loop()
+}
 }
 
 }}
