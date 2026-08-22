@@ -12,5 +12,5 @@ function setup(){
 
 function draw(){
     clear();
-    Image()
+    Image(backdrop)
 }
