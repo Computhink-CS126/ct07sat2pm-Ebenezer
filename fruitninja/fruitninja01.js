@@ -1,3 +1,5 @@
 let backdrop;
 let bS;
-function 
+function preload() {
+    
+}
