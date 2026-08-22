@@ -33,5 +33,6 @@ function spawnFruit(){
     fruit.type = fruitData;
     fruit.vel.y = random(-10, -14);
     fruit.vel.x = random(-2,2);
+    fruit.friction = 0;
     
 }
