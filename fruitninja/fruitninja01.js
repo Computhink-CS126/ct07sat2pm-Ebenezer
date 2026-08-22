@@ -21,5 +21,5 @@ function setup(){
 function draw(){
     clear();
     Image(backdrop,0,0,width,height);
-    
+    if (frameCount % 120 === 0)
 }
