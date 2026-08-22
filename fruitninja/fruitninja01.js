@@ -1,5 +1,5 @@
 let backdrop;
 let bS;
 function preload() {
-    bS = loadImage()
+    bS = loadImage(assets)
 }
