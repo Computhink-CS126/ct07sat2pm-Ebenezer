@@ -1,5 +1,6 @@
 let backdrop;
 let bS;
 function preload() {
-    bS = loadImage('assets/dojobackground.png')
+    backdrop = loadImage('assets/dojobackground.png');
+    
 }
