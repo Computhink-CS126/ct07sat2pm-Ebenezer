@@ -1,7 +1,7 @@
 let backdrop;
 let bS;
 let fruitGroup;
-let
+let fruitTypes = [];
 function preload() {
     backdrop = loadImage('assets/dojobackground.png');
 }
