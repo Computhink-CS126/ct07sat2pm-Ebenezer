@@ -31,6 +31,7 @@ function spawnFruit(){
     let randomX = random(300,500);
     let fruit = new fruitGroup.Sprite(randomX, height+20, 40);
     fruit.type = fruitData;
-    fruit.vel.y = random(-10, -14)
+    fruit.vel.y = random(-10, -14);
+    fruit.vel.x = random
     
 }
