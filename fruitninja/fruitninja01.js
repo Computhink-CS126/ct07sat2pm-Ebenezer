@@ -61,7 +61,7 @@ function sliceFruit(){
         const fx = fruit.x;
         const fy = fruit.y;
         fruit.remove();
-        splitFruit(fx, fy, fruit.type)
+        splitFruit(fx, fy, fruit.type);
         break;
     }
 }
