@@ -76,5 +76,6 @@ function splitFruit(x, y, fruitData){
     right.img = fruitData.half2;
     right.vel.x = 3;
     right.vel.y = random(-5, -2);
-    right
+    right.rotationSpeed = 5;
+    right.life = 30;
 }
