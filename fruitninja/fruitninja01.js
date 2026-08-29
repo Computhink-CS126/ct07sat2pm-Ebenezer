@@ -49,5 +49,5 @@ function sliceFruit(){
     for (let fruit of fruitGroup){
         continue;
     }
-    
+    let d = dist(mouse.x, mo)
 }
