@@ -1,0 +1,73 @@
+1)coordinate system
+top left is 0,0 origin point
+move right X increases Y remains
+move down Y increases X remains
+
+2)declare var
+let varname = smt;
+const varname = smt;
+
+3)for loop syntax
+for(let i =0 ; i<5; i++){do smt}
+for(declaration; condition; increment){action}
+
+4)if else what will be printed
+let score = 90
+if(score >90){console.log("A+")} <---- console.log() = print() in python
+else {console.log("F")}
+
+5)while loop what will be printed
+i = 0;
+while(i<2){ console.log(i); i++} print 0,1
+
+6)how to create array
+let arrname = [obj1, obj2, obj3];
+
+7)function setup function draw what be printed after 5 frame
+things in function setup() run once only
+things in function draw() run multiple times <--- if questions asked how many times in 5 frames?
+
+8)world gravity negative n collider dynamic what will happen
+world.gravity.y = -10; where will my sprite go??? it will go upwards
+
+9)what is preload for
+is to load all the images and sound befoere hand so that the sprite can use it
+
+10)falling sprite on mouse click
+let bball<---create a variable first *take note ensure variable naming convention must be meaningful
+function setup(){
+new Canvas(800,600);
+background(220); <--- darkgray [black =0 white = 255]
+world.gravity.y = 10;
+}
+
+function draw(){
+if(mouse.pressing()){
+fill(random(255),random(255),random(255));
+ball = new Sprite(mouse.x,mouse.y,10)<--- Sprite(x,y,d);
+two ways to state the collider;
+ball.collider ="dynamic"; <- in order for object to move need to by dynamic;
+}
+}
+
+
+11)bouncing sprite on ground
+let bball<---create a variable first *take note ensure variable naming convention must be meaningful
+let ground; <-- please make sure var name is meaningingful, dont start with number or use reserved word
+function setup(){
+new Canvas(800,600);
+background(220); <--- darkgray [black =0 white = 255]
+world.gravity.y = 10;
+ground = new Sprite(0,600,800,30); <--- create a ground floor Sprite(x,y,w,h);
+ground.collider = "static" ;<--- we dont want the floor to move so static
+}
+
+function draw(){
+if(mouse.pressing()){
+fill(random(255),random(255),random(255));
+ball = new Sprite(mouse.x,mouse.y,10)<--- Sprite(x,y,d);
+One ways to state the collider;
+ball.collider ="dynamic"; <- in order for object to move need to by dynamic;
+ball.bounciness = number <-- u specify the number yourself must set else ball wont bounce
+}
+}
