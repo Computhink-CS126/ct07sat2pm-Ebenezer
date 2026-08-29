@@ -72,5 +72,6 @@ function splitFruit(x, y, fruitData){
     left.vel.y = random(-5,-2);
     left.rotationSpeed = -5;
     left.life = 30;
-    let right = new fruitHalves.Sprite(x + 10, )
+    let right = new fruitHalves.Sprite(x + 10, y, 40, 40);
+    
 }
