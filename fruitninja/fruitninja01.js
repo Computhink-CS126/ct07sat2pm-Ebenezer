@@ -65,3 +65,6 @@ function sliceFruit(){
         break;
     }
 }
+function splitFruit(){
+    
+}
