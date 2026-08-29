@@ -25,7 +25,7 @@ function draw(){
         spawnFruit();
     }
     if (MouseEvent.pressing()){
-        
+        trail = new Sprite
     }
 }
 
