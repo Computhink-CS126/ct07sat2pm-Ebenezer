@@ -67,7 +67,7 @@ function draw(){
             fill("red");
             textSize(70);
             textAlign(CENTER, CENTER);
-            
+            text("YOU HIT BOMB",width/2)
         }
     }
 }
