@@ -147,5 +147,6 @@ function drawExplosion(x, y){
     circle(x,y,explosionTimer*12);
     fill(250,150,0);
     circle(x,y,explosionTimer*8);
-    fill
+    fill(255,255,0);
+    
 }
