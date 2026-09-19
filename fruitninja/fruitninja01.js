@@ -54,7 +54,7 @@ function draw(){
         sliceBomb();
     }
     if (exploded){
-        
+        drawExplosion
     }
 }
 
