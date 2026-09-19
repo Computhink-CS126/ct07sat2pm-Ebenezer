@@ -67,7 +67,7 @@ function spawnBomb(){
     bomb.type = bombData;
     bomb.vel.y = random(-10, -14);
     bomb.vel.x = random(-2, 2);
-    bomb.friction
+    bomb.friction = 0;
 }
 function sliceFruit(){
     for (let fruit of fruitGroup){
