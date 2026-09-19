@@ -19,7 +19,7 @@ function preload() {
         whole: "loadImage('assets/redbird-upflap.png')"
     }
     fruitTypes = [peach,watermelon];
-    bombarray = [bomb]
+    bombarray = [bomb];
 }
 
 function setup(){
