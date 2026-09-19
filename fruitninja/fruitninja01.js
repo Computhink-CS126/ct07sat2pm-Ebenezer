@@ -62,7 +62,7 @@ function spawnFruit(){
 function spawnBomb(){
     let bombData = random(bombarray);
     let randomX = random(300,500);
-    
+    let bomb = new Sprite()
 }
 function sliceFruit(){
     for (let fruit of fruitGroup){
