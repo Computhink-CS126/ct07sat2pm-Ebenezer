@@ -8,7 +8,7 @@ function preload() {
     let peach = {
         whole: loadImage('assets/peachwhole.png'),
         half1: loadImage('assets/peachhalf.png'),
-        half2: loadImage('assets/peachhalf.png'),
+        half2: loadImage('assets/peachhalf2.png'),
     };
     let watermelon = {
         whole: loadImage('assets/watermelonwhole.png'),
@@ -74,7 +74,7 @@ function splitFruit(x, y, fruitData){
     left.vel.y = random(-5,-2);
     left.rotationSpeed = -5;
     left.life = 30;
-    
+
     let right = new fruitHalves.Sprite(x + 10, y, 40, 40);
     right.img = fruitData.half2;
     right.vel.x = 3;
