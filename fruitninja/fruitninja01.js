@@ -58,8 +58,8 @@ function draw(){
         explosionTimer++
         if (explosionTimer>30){
             fruitGroup.removeAll();
-            fruitHalves.removeAll;
-            bombGroup.removeAll;
+            fruitHalves.removeAll();
+            bombGroup.removeAll();
             noStroke();
             fill (0,0,0,180);
             rect(0,0,width,height);
