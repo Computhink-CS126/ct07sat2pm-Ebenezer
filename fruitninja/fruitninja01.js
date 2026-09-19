@@ -121,7 +121,7 @@ function sliceBomb(){
             explosionY = bombs.y;
             bombs.remove();
             explosionTimer = 0;
-            
+            exploded = true;
             break;
         }
     }
