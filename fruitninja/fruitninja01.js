@@ -61,7 +61,8 @@ function draw(){
             fruitHalves.removeAll;
             bombGroup.removeAll;
             noStroke();
-            fill (0,0,0,)
+            fill (0,0,0,180);
+            React(0,0,width,height)
         }
     }
 }
