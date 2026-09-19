@@ -141,3 +141,6 @@ function splitFruit(x, y, fruitData){
     right.rotationSpeed = 5;
     right.life = 30;
 }
+function drawExplosion(){
+    
+}
