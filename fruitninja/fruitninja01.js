@@ -87,8 +87,9 @@ function sliceFruit(){
 function slideBomb(){
     for (let bombs of fruitGroup){
         if (bombs.sliced){
-            
+            continue;
         }
+        
     }
 }
 function splitFruit(x, y, fruitData){
