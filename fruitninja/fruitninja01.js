@@ -16,7 +16,7 @@ function preload() {
         half2: loadImage('assets/watermelonhalf.png'),
     };
     function bomb(){
-        whole
+        whole: "loadImage('assets"
     }
     fruitTypes = [peach,watermelon];
 }
