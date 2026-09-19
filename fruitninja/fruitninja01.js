@@ -121,9 +121,7 @@ function sliceBomb(){
             const by = bombs.y;
             bombs.remove();
             explosionTimer = 0;
-            if (exploded){
-                drawExplosion(bx,by);
-            }
+            
             break;
         }
     }
