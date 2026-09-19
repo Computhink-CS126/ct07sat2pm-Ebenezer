@@ -97,7 +97,7 @@ function slideBomb(){
             bombs.remove();
             explosionTimer = 0;
             if (exploded){
-                
+                drawExplosion(bx,by);
             }
             break;
         }
