@@ -62,7 +62,9 @@ function spawnFruit(){
 function spawnBomb(){
     let bombData = random(bombarray);
     let randomX = random(300,500);
-    let bomb = new Sprite(randomX, height+20)
+    let bomb = new Sprite(randomX, height+20,80);
+    bomb.image = bombData.whole;
+    
 }
 function sliceFruit(){
     for (let fruit of fruitGroup){
