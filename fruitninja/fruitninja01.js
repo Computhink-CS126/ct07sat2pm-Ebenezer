@@ -3,6 +3,7 @@ let bS;
 let fruitGroup;
 let fruitTypes = [];
 let fruitHalves;
+let bombarray = []
 function preload() {
     backdrop = loadImage('assets/dojobackground.png');
     let peach = {
