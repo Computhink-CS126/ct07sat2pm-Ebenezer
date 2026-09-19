@@ -84,7 +84,9 @@ function sliceFruit(){
     }
     }
 }
-
+function slideBomb(){
+    for (let bombs of fruitGroup)
+}
 function splitFruit(x, y, fruitData){
     let left = new fruitHalves.Sprite(x - 10, y, 40, 40);
     left.img = fruitData.half1;
