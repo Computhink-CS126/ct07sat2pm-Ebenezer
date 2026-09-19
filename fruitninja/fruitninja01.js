@@ -85,7 +85,11 @@ function sliceFruit(){
     }
 }
 function slideBomb(){
-    for (let bombs of fruitGroup)
+    for (let bombs of fruitGroup){
+        if (bombs.sliced){
+            
+        }
+    }
 }
 function splitFruit(x, y, fruitData){
     let left = new fruitHalves.Sprite(x - 10, y, 40, 40);
