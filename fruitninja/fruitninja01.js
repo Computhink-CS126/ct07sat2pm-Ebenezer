@@ -54,7 +54,7 @@ function spawnFruit(){
 function sliceFruit(){
     for (let fruit of fruitGroup){
         if (fruit.slice) {continue;
-    }
+        }
     let d = dist(mouse.x, mouse.y, fruit.x, fruit.y);
     if (d< ((fruit.d/2) +5)) {
         fruit.sliced = true;
@@ -66,6 +66,7 @@ function sliceFruit(){
     }
     }
 }
+
 function splitFruit(x, y, fruitData){
     let left = new fruitHalves.Sprite(x - 10, y, 40, 40);
     left.img = fruitData.half1;
