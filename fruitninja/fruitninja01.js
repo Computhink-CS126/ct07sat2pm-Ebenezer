@@ -89,7 +89,7 @@ function slideBomb(){
         if (bombs.sliced){
             continue;
         }
-        let bombD = dist(mouse.x, mouse.y, )
+        let bombD = dist(mouse.x, mouse.y, bombs.x, bombs.y)
     }
 }
 function splitFruit(x, y, fruitData){
