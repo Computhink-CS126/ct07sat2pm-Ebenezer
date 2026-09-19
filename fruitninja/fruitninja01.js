@@ -53,6 +53,9 @@ function draw(){
         sliceFruit();
         sliceBomb();
     }
+    if (exploded){
+        
+    }
 }
 
 function spawnFruit(){
