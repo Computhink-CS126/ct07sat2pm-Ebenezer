@@ -94,7 +94,8 @@ function slideBomb(){
             bombs.sliced = true;
             const bx = bombs.x;
             const by = bombs.y;
-            
+            bombs.remove();
+            explosion
             break;
         }
     }
