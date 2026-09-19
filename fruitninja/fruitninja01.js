@@ -32,7 +32,7 @@ function setup(){
     world.gravity.y = 10;
     fruitGroup = new Group()
     fruitHalves = new Group();
-    bombGroup = new Group()
+    bombGroup = new Group();
 }
 
 function draw(){
