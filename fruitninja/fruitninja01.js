@@ -57,7 +57,8 @@ function draw(){
         drawExplosion(explosionX,explosionY);
         explosionTimer++
         if (explosionTimer>30){
-            
+            fruitGroup.removeAll();
+            fruitHalves
         }
     }
 }
