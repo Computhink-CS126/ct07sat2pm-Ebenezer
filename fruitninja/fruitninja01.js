@@ -93,7 +93,8 @@ function slideBomb(){
         if (bombD < (bombs.d/x+5)){
             bombs.sliced = true;
             const bx = bombs.x;
-            const by = bombs.y
+            const by = bombs.y;
+            
             break;
         }
     }
