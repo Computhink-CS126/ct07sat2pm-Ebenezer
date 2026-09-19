@@ -59,7 +59,9 @@ function spawnFruit(){
     fruit.img = fruitData.whole
     fruit.friction = 0;
 }
-
+function spawnBomb(){
+    
+}
 function sliceFruit(){
     for (let fruit of fruitGroup){
         if (fruit.slice) {continue;
