@@ -66,7 +66,7 @@ function draw(){
 
             fill("red");
             textSize(70);
-            
+            textAlign(CE)
         }
     }
 }
