@@ -61,7 +61,7 @@ function draw(){
             fruitHalves.removeAll;
             bombGroup.removeAll;
             noStroke();
-            
+            fill (0,0,0,)
         }
     }
 }
