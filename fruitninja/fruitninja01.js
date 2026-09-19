@@ -144,5 +144,7 @@ function splitFruit(x, y, fruitData){
 function drawExplosion(x, y){
     noStroke();
     fill(255, 0, 0);
-    circle(x,y,)
+    circle(x,y,explosionTimer*12);
+    fill(250,150,0);
+    
 }
