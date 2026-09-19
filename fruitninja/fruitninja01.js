@@ -65,6 +65,8 @@ function draw(){
             rect(0,0,width,height);
 
             fill("red");
+            textSize(70);
+            
         }
     }
 }
