@@ -49,8 +49,8 @@ function spawnFruit(){
     fruit.vel.x = random(-2,2);
     fruit.img = fruitData.whole
     fruit.friction = 0;
-    
 }
+
 function sliceFruit(){
     for (let fruit of fruitGroup){
         if (fruit.slice) {continue;
