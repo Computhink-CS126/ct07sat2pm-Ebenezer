@@ -60,7 +60,8 @@ function spawnFruit(){
     fruit.friction = 0;
 }
 function spawnBomb(){
-    
+    let bombData = random(bombarray);
+    let randomX = random(300,500)
 }
 function sliceFruit(){
     for (let fruit of fruitGroup){
