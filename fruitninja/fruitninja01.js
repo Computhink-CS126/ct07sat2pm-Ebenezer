@@ -37,7 +37,7 @@ function draw(){
         spawnFruit();
     }
     if (frameCount %300 == 0){
-        
+        spawnBomb();
     }
     
     if (mouse.pressing()){
