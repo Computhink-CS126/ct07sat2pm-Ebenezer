@@ -51,8 +51,7 @@ function draw(){
         trail.color = 'red';
         trail.life = 10;
         sliceFruit();
-        sliceFruit();
-        
+        sliceBomb();
     }
 }
 
