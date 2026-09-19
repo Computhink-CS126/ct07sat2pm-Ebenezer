@@ -54,7 +54,11 @@ function draw(){
         sliceBomb();
     }
     if (exploded){
-        drawExplosion(explosionX)
+        drawExplosion(explosionX,explosionY);
+        explosionTimer++
+        if (explosionTimer>30){
+            
+        }
     }
 }
 
