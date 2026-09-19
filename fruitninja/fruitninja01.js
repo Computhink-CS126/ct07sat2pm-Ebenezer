@@ -5,7 +5,8 @@ let fruitTypes = [];
 let fruitHalves;
 let bombarray = []
 let bombGroup;
-lert
+let exploded = false;
+let explosionX, explosionY
 function preload() {
     backdrop = loadImage('assets/dojobackground.png');
     let peach = {
