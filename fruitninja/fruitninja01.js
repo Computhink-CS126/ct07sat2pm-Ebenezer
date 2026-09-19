@@ -90,7 +90,7 @@ function sliceFruit(){
     }
     }
 }
-function slideBomb(){
+function sliceBomb(){
     for (let bombs of fruitGroup){
         if (bombs.sliced){
             continue;
