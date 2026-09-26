@@ -79,7 +79,9 @@ function draw(){
         textAlign(LEFT,TOP);
         text('Score: ' + score, 10, 10)
     }
-    for ()
+    for (let fruit of fruitGroup){
+        if (fruit.y > height + 50){}
+    }
 }
 
 function spawnFruit(){
