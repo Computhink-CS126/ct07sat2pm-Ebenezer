@@ -40,7 +40,7 @@ function setup(){
 
 function draw(){
     clear();
-    if ((Keybo))
+    if ((kb.presses('')))
     image(backdrop,0,0,width,height);
     if (gameState === 'start'){
         fill(0, 180);
