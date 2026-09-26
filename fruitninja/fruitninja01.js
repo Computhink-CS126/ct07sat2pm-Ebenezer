@@ -76,7 +76,7 @@ function draw(){
         fill(255);
         textSize(24);
         textAlign(LEFT,TOP);
-        text('Score: ' + score)
+        text('Score: ' + score, 10, 10)
     }
 }
 
