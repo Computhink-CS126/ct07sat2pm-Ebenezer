@@ -72,6 +72,7 @@ function draw(){
             text("CRY ABOUT IT", width/2, height/2+70);
             noLoop();
         }
+        
     }
 }
 
