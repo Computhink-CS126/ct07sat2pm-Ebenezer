@@ -8,6 +8,7 @@ let bombGroup;
 let exploded = false;
 let explosionX, explosionY;
 let explosionTimer
+
 function preload() {
     backdrop = loadImage('assets/dojobackground.png');
     let peach = {
