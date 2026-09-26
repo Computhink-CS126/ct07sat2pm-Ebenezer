@@ -43,7 +43,9 @@ function draw(){
     image(backdrop,0,0,width,height);
     if (gameState === 'start'){
         fill(0, 180);
-        rect()
+        rect(0,0,width,height);
+        fill(255);
+        
     }
     if (frameCount % 120 === 0){
         spawnFruit();
