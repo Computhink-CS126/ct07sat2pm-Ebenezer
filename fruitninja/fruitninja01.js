@@ -40,6 +40,7 @@ function setup(){
 
 function draw(){
     clear();
+    if ((Keybo))
     image(backdrop,0,0,width,height);
     if (gameState === 'start'){
         fill(0, 180);
@@ -51,6 +52,7 @@ function draw(){
         textSize(24);
         text('Press SPACE or Click to Start', width/2, height/'2 + 40');
         return;
+
     }
     if (frameCount % 120 === 0){
         spawnFruit();
