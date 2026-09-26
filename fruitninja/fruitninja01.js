@@ -9,6 +9,8 @@ let exploded = false;
 let explosionX, explosionY;
 let explosionTimer
 let score = 0;
+let missedFruits = 0;
+
 function preload() {
     backdrop = loadImage('assets/dojobackground.png');
     let peach = {
