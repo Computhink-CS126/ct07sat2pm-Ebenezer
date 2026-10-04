@@ -156,9 +156,7 @@ setTimeout(() => {
     startMessageLabel.y = height/2-50;
     loop()
 }
-}
 
-}}
 function drawScore(x, y, score, digitWidth, digitHeight) {
     scoreDigits.removeAll();
     let scoreStr = str(score);
