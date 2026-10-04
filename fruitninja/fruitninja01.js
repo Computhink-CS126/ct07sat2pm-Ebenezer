@@ -3,7 +3,7 @@ let bS;
 let fruitGroup;
 let fruitTypes = [];
 let fruitHalves;
-let bombarray = []
+let bombarray = [];
 let bombGroup;
 let exploded = false;
 let explosionX, explosionY;
