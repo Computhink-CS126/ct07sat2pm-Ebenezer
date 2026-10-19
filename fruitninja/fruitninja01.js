@@ -24,8 +24,9 @@ function preload() {
         half2: loadImage('assets/watermelonhalf.png'),
     };
     let berry = {
-        whole: loadImage('assets/fruitninja_berry.png')
-        
+        whole: loadImage('assets/fruitninja_berry.png'),
+        half1: loadImage('assets/fruitninja_berry_half1.png'),
+
     }
     let bomb = {
         whole: loadImage('assets/fruitninja_bomb.png')
