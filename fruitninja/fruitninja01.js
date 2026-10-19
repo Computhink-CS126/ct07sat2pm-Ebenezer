@@ -141,7 +141,7 @@ function sliceFruit(){
     }
 }
 function sliceBomb(){
-    for (let bombs of fruitGroup){
+    for (let bombs of bombGroup){
         if (bombs.sliced){
             continue;
         }
