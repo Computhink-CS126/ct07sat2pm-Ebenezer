@@ -146,7 +146,7 @@ function sliceBomb(){
             continue;
         }
         let bombD = dist(mouse.x, mouse.y, bombs.x, bombs.y);
-        if (bombD < (bombs.d/x+5)){
+        if (bombD < (bombs.d/2+5)){
             bombs.sliced = true;
             explosionX = bombs.x;
             explosionY = bombs.y;
