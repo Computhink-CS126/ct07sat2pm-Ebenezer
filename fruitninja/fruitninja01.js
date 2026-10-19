@@ -40,7 +40,8 @@ function preload() {
     }
     let melon = {
         whole: loadImage('assets/fruitninja_melon.png'),
-        half1:
+        half1: loadImage('assets/fruitninja_melon_half1.png'),m
+        half2: loadImage('assets/fruitninja_melon_half2.png')
     }
     let bomb = {
         whole: loadImage('assets/fruitninja_bomb.png')
