@@ -30,7 +30,7 @@ function preload() {
     }
     let clock = {
         whole: loadImage('assets/fruitninja_clockHalf1.png'),
-        half1: loadImage()
+        half1: loadImage('assets/')
     }
     let bomb = {
         whole: loadImage('assets/fruitninja_bomb.png')
