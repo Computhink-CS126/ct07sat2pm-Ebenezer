@@ -117,7 +117,7 @@ function spawnFruit(){
 function spawnBomb(){
     let bombData = random(bombarray);
     let randomX = random(300,500);
-    let bomb = new bomSprite(randomX, height+20,80);
+    let bomb = new bombGroup.Sprite(randomX, height+20,80);
     bomb.image = bombData.whole;
     bomb.type = bombData;
     bomb.vel.y = random(-10, -14);
