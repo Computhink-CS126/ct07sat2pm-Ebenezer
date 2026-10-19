@@ -41,7 +41,7 @@ function setup(){
 function draw(){
     clear();
     if ((kb.presses('') || mouse.presses()) && (gameState === 'start') ){
-        image(backdrop,0,0,width,height);
+        
     }
     if (gameState === 'start'){
         fill(0, 180);
