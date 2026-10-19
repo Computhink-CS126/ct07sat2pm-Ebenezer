@@ -25,7 +25,7 @@ function preload() {
     };
     let berry = {
         whole: loadImage('assets/fruitninja_berry.png')
-
+        
     }
     let bomb = {
         whole: loadImage('assets/fruitninja_bomb.png')
