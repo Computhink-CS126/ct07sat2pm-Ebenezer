@@ -29,3 +29,6 @@ a:hover {
     background-color: #00ccff;
     color: #111;
 }
+.game-links a {
+    text-align: center;
+}
