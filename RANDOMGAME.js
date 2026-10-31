@@ -129,6 +129,9 @@ const state = {
   elapsed: 0,
   spawnElapsed: 0,
   invulnerable: 0,
+  strikeElapsed: 0,
+  strikeDamage: 0,
+  strikeMessage: "",
   defending: false,
   phase: false,
   lastFrame: 0,
@@ -234,14 +237,13 @@ function beginBattle() {
 function fight() {
   const damage = 5 + Math.floor(Math.random() * 5);
   state.bossHp = Math.max(0, state.bossHp - damage);
-  if (state.bossHp === 0) {
-    state.mode = "victory";
-    setMessage(`${currentBoss().name} applauds your skill and yields the arena.`);
-    showMenu();
-    updateStatus();
-    return;
-  }
-  startAttack(`You land a ${damage}-damage hit! ${currentBoss().attack}`);
+  state.mode = "strike";
+  state.strikeElapsed = 0;
+  state.strikeDamage = damage;
+  state.strikeMessage = `You land a ${damage}-damage hit!`;
+  setMessage(state.strikeMessage);
+  showMenu();
+  updateStatus();
 }
 
 function act() {
@@ -283,6 +285,17 @@ function startAttack(message) {
   setMessage(enteringPhase ? `${currentBoss().name} changes tactics! ${message}` : message);
   showMenu();
   updateStatus();
+}
+
+function finishStrike() {
+  if (state.bossHp === 0) {
+    state.mode = "victory";
+    setMessage(`${currentBoss().name} applauds your skill and yields the arena.`);
+    showMenu();
+    updateStatus();
+    return;
+  }
+  startAttack(`${state.strikeMessage} ${currentBoss().attack}`);
 }
 
 function finishAttack() {
@@ -361,14 +374,20 @@ function drawBackground(time) {
 
 function drawBoss(time) {
   const boss = currentBoss();
-  const bob = Math.sin(time / 400) * 4;
+  const hit = state.mode === "strike" && state.strikeElapsed < 260;
+  const hitShake = hit ? Math.sin(state.strikeElapsed * 0.11) * (1 - state.strikeElapsed / 260) * 9 : 0;
+  const attackWindup = state.mode === "attack" && state.elapsed < 420;
+  const attackPulse = attackWindup ? Math.sin((state.elapsed / 420) * Math.PI) : 0;
+  const bob = Math.sin(time / (430 + state.bossIndex * 35)) * (4 + state.bossIndex);
   const y = 105 + bob;
   context.save();
-  context.translate(400, y);
+  context.translate(400 + hitShake, y - attackPulse * 8);
+  context.rotate(Math.sin(time / 850 + state.bossIndex) * 0.045 + (hit ? Math.sin(state.strikeElapsed * 0.08) * 0.12 : 0));
+  context.scale(1 + attackPulse * 0.09, 1 - attackPulse * 0.05);
   context.shadowColor = boss.color;
-  context.shadowBlur = 18;
-  context.fillStyle = boss.accent;
-  context.strokeStyle = boss.color;
+  context.shadowBlur = hit ? 30 : 18;
+  context.fillStyle = hit ? "#fff4d1" : boss.accent;
+  context.strokeStyle = hit ? "#ffffff" : boss.color;
   context.lineWidth = 3;
 
   if (state.bossIndex === 0) {
@@ -555,6 +574,45 @@ function drawArena() {
         context.lineTo(bullet.x, bullet.y + bullet.radius * 1.5);
         context.lineTo(bullet.x - bullet.radius, bullet.y);
         context.closePath();
+      } else if (state.mode === "strike") {
+        const progress = Math.min(1, state.strikeElapsed / 620);
+        const slashX = 284 + progress * 232;
+        const slashY = 101 + Math.sin(progress * Math.PI) * 16;
+        context.save();
+        context.globalAlpha = Math.sin(progress * Math.PI) * 0.95;
+        context.strokeStyle = "#fff4d1";
+        context.shadowColor = currentBoss().color;
+        context.shadowBlur = 22;
+        context.lineWidth = 9;
+        context.beginPath();
+        context.moveTo(slashX - 40, slashY + 27);
+        context.lineTo(slashX + 40, slashY - 27);
+        context.stroke();
+        context.lineWidth = 3;
+        context.strokeStyle = currentBoss().color;
+        context.beginPath();
+        context.moveTo(slashX - 28, slashY + 31);
+        context.lineTo(slashX + 45, slashY - 17);
+        context.stroke();
+        context.globalAlpha = Math.sin(progress * Math.PI);
+        context.fillStyle = "#fff4d1";
+        for (let i = 0; i < 5; i += 1) {
+          const angle = (Math.PI * 2 * i) / 5 + progress * 2;
+          context.beginPath();
+          context.arc(slashX + Math.cos(angle) * 30, slashY + Math.sin(angle) * 20, 2.5, 0, Math.PI * 2);
+          context.fill();
+        }
+        context.restore();
+
+        const playerY = 262 - Math.sin(progress * Math.PI) * 64;
+        context.save();
+        context.fillStyle = "#ff6d82";
+        context.shadowColor = "#ff6d82";
+        context.shadowBlur = 14;
+        context.translate(400, playerY);
+        context.rotate(Math.PI / 4);
+        context.fillRect(-7, -7, 14, 14);
+        context.restore();
       } else {
         context.arc(bullet.x, bullet.y, bullet.radius, 0, Math.PI * 2);
       }
@@ -721,10 +779,16 @@ function updateAttack(delta) {
   if (state.elapsed >= 8000) finishAttack();
 }
 
+function updateStrike(delta) {
+  state.strikeElapsed += delta * 1000;
+  if (state.strikeElapsed >= 620) finishStrike();
+}
+
 function frame(time) {
   const delta = state.lastFrame ? Math.min((time - state.lastFrame) / 1000, 0.05) : 0;
   state.lastFrame = time;
   if (state.mode === "attack") updateAttack(delta);
+  if (state.mode === "strike") updateStrike(delta);
   draw();
   requestAnimationFrame(frame);
 }
