@@ -174,8 +174,81 @@ button {
   text-align: center;
 }
 
-.start-screen[hidden] {
+.start-screen[hidden],
+.tutorial-screen[hidden] {
   display: none;
+}
+
+.tutorial-screen {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(14px, 4vw, 26px);
+  background: radial-gradient(ellipse at center, rgba(25, 23, 49, 0.97), rgba(9, 11, 22, 0.99));
+  text-align: center;
+}
+
+.tutorial-topline {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  left: 18px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tutorial-progress {
+  color: #aaa9bd;
+  font-family: "DM Mono", monospace;
+  font-size: 0.7rem;
+}
+
+.tutorial-symbol {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  margin-bottom: 5px;
+  border: 1px solid #7565cc;
+  border-radius: 50%;
+  color: #c9baff;
+  font-size: 1.4rem;
+  box-shadow: 0 0 22px rgba(156, 139, 255, 0.2);
+}
+
+.tutorial-screen h3 {
+  margin: 4px 0 6px;
+  font-size: clamp(1.12rem, 3.8vw, 1.45rem);
+}
+
+.tutorial-screen > p {
+  max-width: 430px;
+  margin: 0;
+  color: #b7b5ca;
+  font-size: clamp(0.78rem, 2.4vw, 0.9rem);
+  line-height: 1.5;
+}
+
+.tutorial-example {
+  min-height: 27px;
+  margin-top: 10px;
+  color: #e5dcff;
+  font-size: clamp(0.72rem, 2.3vw, 0.82rem);
+  line-height: 1.55;
+}
+
+.tutorial-example kbd {
+  margin: 0 2px;
+}
+
+.tutorial-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 12px;
 }
 
 .start-orbit {
@@ -217,6 +290,33 @@ button {
   background: #a393ff;
   color: #171328;
   font-weight: 700;
+}
+
+.secondary-button {
+  padding: 9px 16px;
+  border: 1px solid #47425f;
+  border-radius: 9px;
+  background: #201f35;
+  color: #ded9f3;
+  cursor: pointer;
+  font: inherit;
+}
+
+.secondary-button:disabled {
+  cursor: default;
+  opacity: 0.4;
+}
+
+.tutorial-skip {
+  margin-top: 8px;
+  border: 0;
+  background: transparent;
+  color: #9b98b1;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.72rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .primary-button:hover,

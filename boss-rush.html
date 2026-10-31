@@ -34,9 +34,24 @@
         <canvas id="arena" width="800" height="360" aria-label="Boss arena. Dodge incoming stars with the arrow or WASD keys."></canvas>
         <div id="start-screen" class="start-screen">
           <div class="start-orbit" aria-hidden="true">✦</div>
-          <h3>The arena is waiting.</h3>
-          <p>Meet five original challengers in a turn-based battle. Choose your moves, then dodge their attacks.</p>
-          <button id="start-button" class="primary-button">Enter the arena</button>
+          <h3>New to the arena?</h3>
+          <p>Take a quick guided tour of the battle choices and learn how to dodge.</p>
+          <button id="start-button" class="primary-button">Start tutorial</button>
+        </div>
+        <div id="tutorial-screen" class="tutorial-screen" hidden>
+          <div class="tutorial-topline">
+            <span class="eyebrow">ARENA FIELD GUIDE</span>
+            <span id="tutorial-progress" class="tutorial-progress">1 / 4</span>
+          </div>
+          <div class="tutorial-symbol" aria-hidden="true">✦</div>
+          <h3 id="tutorial-title">A turn has two parts</h3>
+          <p id="tutorial-copy"></p>
+          <div id="tutorial-example" class="tutorial-example"></div>
+          <div class="tutorial-buttons">
+            <button id="tutorial-back" class="secondary-button" type="button">Back</button>
+            <button id="tutorial-next" class="primary-button" type="button">Next</button>
+          </div>
+          <button id="tutorial-skip" class="tutorial-skip" type="button">Skip tutorial</button>
         </div>
       </div>
 

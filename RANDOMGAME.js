@@ -2,6 +2,14 @@ const canvas = document.querySelector("#arena");
 const context = canvas.getContext("2d");
 const startScreen = document.querySelector("#start-screen");
 const startButton = document.querySelector("#start-button");
+const tutorialScreen = document.querySelector("#tutorial-screen");
+const tutorialProgress = document.querySelector("#tutorial-progress");
+const tutorialTitle = document.querySelector("#tutorial-title");
+const tutorialCopy = document.querySelector("#tutorial-copy");
+const tutorialExample = document.querySelector("#tutorial-example");
+const tutorialBack = document.querySelector("#tutorial-back");
+const tutorialNext = document.querySelector("#tutorial-next");
+const tutorialSkip = document.querySelector("#tutorial-skip");
 const actionMenu = document.querySelector("#action-menu");
 const battleMessage = document.querySelector("#battle-message");
 const bossName = document.querySelector("#boss-name");
@@ -75,6 +83,29 @@ const bosses = [
   }
 ];
 
+const tutorialSteps = [
+  {
+    title: "A turn has two parts",
+    copy: "On your turn, choose an action from the buttons below the arena. After your move, the challenger attacks.",
+    example: "Pick a move → dodge the incoming stars → choose again."
+  },
+  {
+    title: "Fight or make a friend",
+    copy: "Fight deals damage. Act uses a unique friendly choice for each challenger. Act twice to make them ready to Spare.",
+    example: "<strong>Fight</strong> hurts · <strong>Act</strong> builds rapport · <strong>Spare</strong> ends the fight peacefully"
+  },
+  {
+    title: "Stay on your feet",
+    copy: "Use an Item to restore up to 7 stardust (you have two). Defend slows your movement, but each hit costs less health.",
+    example: "You start with <strong>20 stardust</strong> · Regular hit: 2 · Defending hit: 1"
+  },
+  {
+    title: "Dodge the attack",
+    copy: "When the arena lights up, move your star out of the way until the 6-second attack ends. You can also tap or click a spot inside the arena to move there.",
+    example: "<kbd>↑</kbd> <kbd>↓</kbd> <kbd>←</kbd> <kbd>→</kbd> or <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd>"
+  }
+];
+
 const arenaBounds = { left: 178, right: 622, top: 190, bottom: 333 };
 const stars = Array.from({ length: 64 }, () => ({
   x: Math.random() * canvas.width,
@@ -92,6 +123,7 @@ const state = {
   rapport: 0,
   rapportNeeded: 2,
   potions: 2,
+  tutorialStep: 0,
   player: { x: 400, y: 270 },
   bullets: [],
   elapsed: 0,
@@ -156,6 +188,30 @@ function showMenu() {
   }
 }
 
+function renderTutorialStep() {
+  const step = tutorialSteps[state.tutorialStep];
+  tutorialProgress.textContent = `${state.tutorialStep + 1} / ${tutorialSteps.length}`;
+  tutorialTitle.textContent = step.title;
+  tutorialCopy.textContent = step.copy;
+  tutorialExample.innerHTML = step.example;
+  tutorialBack.disabled = state.tutorialStep === 0;
+  tutorialNext.textContent = state.tutorialStep === tutorialSteps.length - 1 ? "Begin boss rush" : "Next";
+}
+
+function openTutorial() {
+  startScreen.hidden = true;
+  tutorialScreen.hidden = false;
+  state.tutorialStep = 0;
+  renderTutorialStep();
+}
+
+function moveTutorial(direction) {
+  const nextStep = state.tutorialStep + direction;
+  if (nextStep < 0 || nextStep >= tutorialSteps.length) return;
+  state.tutorialStep = nextStep;
+  renderTutorialStep();
+}
+
 function beginBattle() {
   state.mode = "menu";
   state.bossHp = currentBoss().maxHp;
@@ -165,6 +221,7 @@ function beginBattle() {
   state.player.x = 400;
   state.player.y = 270;
   startScreen.hidden = true;
+  tutorialScreen.hidden = true;
   setMessage(currentBoss().intro);
   showMenu();
   updateStatus();
@@ -268,6 +325,7 @@ function restart() {
   state.player.x = 400;
   state.player.y = 270;
   startScreen.hidden = false;
+  tutorialScreen.hidden = true;
   setMessage("Step into the arena to meet your first challenger.");
   showMenu();
   updateStatus();
@@ -588,7 +646,16 @@ canvas.addEventListener("pointerdown", (event) => {
   state.player.y = Math.max(arenaBounds.top + 12, Math.min(arenaBounds.bottom - 12, state.player.y));
 });
 
-startButton.addEventListener("click", beginBattle);
+startButton.addEventListener("click", openTutorial);
+tutorialBack.addEventListener("click", () => moveTutorial(-1));
+tutorialNext.addEventListener("click", () => {
+  if (state.tutorialStep === tutorialSteps.length - 1) {
+    beginBattle();
+  } else {
+    moveTutorial(1);
+  }
+});
+tutorialSkip.addEventListener("click", beginBattle);
 showMenu();
 updateStatus();
 requestAnimationFrame(frame);
