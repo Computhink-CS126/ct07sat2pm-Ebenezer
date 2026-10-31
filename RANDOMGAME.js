@@ -602,8 +602,8 @@ function updateAttack(delta) {
     const bullet = state.bullets[i];
     bullet.x += bullet.vx * delta;
     bullet.y += bullet.vy * delta;
-    if (bullet.x < arenaBounds.left - 24 || bullet.x > arenaBounds.right + 24 ||
-        bullet.y < arenaBounds.top - 24 || bullet.y > arenaBounds.bottom + 24) {
+    if (bullet.x < -bullet.radius || bullet.x > canvas.width + bullet.radius ||
+        bullet.y < -bullet.radius || bullet.y > canvas.height + bullet.radius) {
       state.bullets.splice(i, 1);
       continue;
     }
