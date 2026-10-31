@@ -1,10 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap");
-
 :root {
   color-scheme: dark;
-  font-family: "Space Grotesk", sans-serif;
-  background: #090d18;
-  color: #f0efff;
+  font-family: "Courier New", monospace;
+  background: #080808;
+  color: #f5f2eb;
   font-synthesis: none;
 }
 
@@ -17,9 +15,9 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 32px 18px 24px;
-  background:
-    radial-gradient(ellipse at 50% 0%, rgba(73, 62, 142, 0.25), transparent 50%),
-    #090d18;
+  background-color: #080808;
+  background-image: radial-gradient(#26231d 0.7px, transparent 0.7px);
+  background-size: 5px 5px;
 }
 
 button {
@@ -41,13 +39,13 @@ button {
   position: absolute;
   top: 0;
   left: 0;
-  color: #a7a5be;
+  color: #c4c0b5;
   font-size: 0.85rem;
   text-decoration: none;
 }
 
 .back-link:hover {
-  color: #fff;
+  color: #fff4d1;
 }
 
 .eyebrow,
@@ -56,13 +54,13 @@ button {
 .player-label,
 .turn-label,
 .controls-hint {
-  font-family: "DM Mono", monospace;
-  letter-spacing: 0.12em;
+  font-family: "Courier New", monospace;
+  letter-spacing: 0.08em;
 }
 
 .eyebrow {
   margin: 0;
-  color: #9c8bff;
+  color: #ffd866;
   font-size: 0.7rem;
 }
 
@@ -74,13 +72,13 @@ button {
 }
 
 .page-header h1 span {
-  color: #a393ff;
+  color: #ffd866;
 }
 
 .intro {
   max-width: 500px;
   margin: 12px auto 0;
-  color: #aaa9bd;
+  color: #c4c0b5;
   font-size: 0.98rem;
   line-height: 1.5;
 }
@@ -88,10 +86,10 @@ button {
 .game-panel {
   overflow: hidden;
   padding: clamp(16px, 4vw, 28px);
-  border: 1px solid #292a42;
-  border-radius: 20px;
-  background: linear-gradient(150deg, rgba(24, 25, 45, 0.98), rgba(15, 17, 31, 0.98));
-  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.34), 0 0 50px rgba(91, 77, 188, 0.08);
+  border: 2px solid #d5d0c3;
+  border-radius: 0;
+  background: #10100f;
+  box-shadow: 5px 5px 0 #4b463d;
 }
 
 .arena-heading,
@@ -123,7 +121,7 @@ button {
 
 .health-label {
   margin-bottom: 7px;
-  color: #a7a5be;
+  color: #c4c0b5;
   font-size: 0.65rem;
 }
 
@@ -131,28 +129,28 @@ button {
 .player-health-track {
   overflow: hidden;
   height: 7px;
-  border-radius: 8px;
-  background: #343148;
+  border-radius: 0;
+  background: #36332e;
 }
 
 .health-fill {
   width: 100%;
   height: 100%;
-  border-radius: inherit;
+  border-radius: 0;
   transition: width 180ms ease;
 }
 
 .boss-fill {
-  background: linear-gradient(90deg, #f079a9, #ffae8b);
+  background: #f08a72;
 }
 
 .canvas-wrap {
   position: relative;
   overflow: hidden;
   width: 100%;
-  border: 1px solid #35334c;
-  border-radius: 12px;
-  background: #090b16;
+  border: 2px solid #d5d0c3;
+  border-radius: 0;
+  background: #080808;
 }
 
 #arena {
@@ -170,7 +168,7 @@ button {
   align-items: center;
   justify-content: center;
   padding: 20px;
-  background: radial-gradient(ellipse at center, rgba(19, 19, 39, 0.82), rgba(9, 11, 22, 0.96));
+  background: rgba(8, 8, 8, 0.95);
   text-align: center;
 }
 
@@ -187,7 +185,7 @@ button {
   align-items: center;
   justify-content: center;
   padding: clamp(14px, 4vw, 26px);
-  background: radial-gradient(ellipse at center, rgba(25, 23, 49, 0.97), rgba(9, 11, 22, 0.99));
+  background: rgba(8, 8, 8, 0.98);
   text-align: center;
 }
 
@@ -201,8 +199,8 @@ button {
 }
 
 .tutorial-progress {
-  color: #aaa9bd;
-  font-family: "DM Mono", monospace;
+  color: #c4c0b5;
+  font-family: "Courier New", monospace;
   font-size: 0.7rem;
 }
 
@@ -212,11 +210,11 @@ button {
   height: 42px;
   place-items: center;
   margin-bottom: 5px;
-  border: 1px solid #7565cc;
-  border-radius: 50%;
-  color: #c9baff;
+  border: 2px solid #ffd866;
+  border-radius: 0;
+  color: #ffd866;
   font-size: 1.4rem;
-  box-shadow: 0 0 22px rgba(156, 139, 255, 0.2);
+  box-shadow: 3px 3px 0 #765d24;
 }
 
 .tutorial-screen h3 {
@@ -227,7 +225,7 @@ button {
 .tutorial-screen > p {
   max-width: 430px;
   margin: 0;
-  color: #b7b5ca;
+  color: #c4c0b5;
   font-size: clamp(0.78rem, 2.4vw, 0.9rem);
   line-height: 1.5;
 }
@@ -235,8 +233,8 @@ button {
 .tutorial-example {
   min-height: 27px;
   margin-top: 10px;
-  color: #e5dcff;
-  font-size: clamp(0.72rem, 2.3vw, 0.82rem);
+  color: #fff4d1;
+  font-size: clamp(0.68rem, 2.2vw, 0.78rem);
   line-height: 1.55;
 }
 
@@ -257,11 +255,11 @@ button {
   height: 44px;
   place-items: center;
   margin-bottom: 7px;
-  border: 1px solid #7565cc;
-  border-radius: 50%;
-  color: #c9baff;
+  border: 2px solid #ffd866;
+  border-radius: 0;
+  color: #ffd866;
   font-size: 1.5rem;
-  box-shadow: 0 0 24px rgba(156, 139, 255, 0.24);
+  box-shadow: 3px 3px 0 #765d24;
 }
 
 .start-screen h3 {
@@ -280,24 +278,24 @@ button {
 .primary-button,
 .action-button {
   cursor: pointer;
-  border: 1px solid transparent;
-  border-radius: 9px;
-  transition: transform 120ms ease, background 120ms ease, border-color 120ms ease;
+  border: 2px solid transparent;
+  border-radius: 0;
+  transition: background 120ms ease, border-color 120ms ease;
 }
 
 .primary-button {
   padding: 10px 18px;
-  background: #a393ff;
-  color: #171328;
+  background: #ffd866;
+  color: #17130a;
   font-weight: 700;
 }
 
 .secondary-button {
   padding: 9px 16px;
-  border: 1px solid #47425f;
-  border-radius: 9px;
-  background: #201f35;
-  color: #ded9f3;
+  border: 2px solid #8e8879;
+  border-radius: 0;
+  background: #1b1a17;
+  color: #f5f2eb;
   cursor: pointer;
   font: inherit;
 }
@@ -311,7 +309,7 @@ button {
   margin-top: 8px;
   border: 0;
   background: transparent;
-  color: #9b98b1;
+  color: #aaa394;
   cursor: pointer;
   font: inherit;
   font-size: 0.72rem;
@@ -321,7 +319,7 @@ button {
 
 .primary-button:hover,
 .action-button:hover:not(:disabled) {
-  transform: translateY(-2px);
+  filter: brightness(1.15);
 }
 
 .player-status {
@@ -334,7 +332,7 @@ button {
   flex: 0 0 auto;
   align-items: center;
   gap: 7px;
-  color: #d4d0e7;
+  color: #e6e1d5;
   font-size: 0.63rem;
 }
 
@@ -356,13 +354,13 @@ button {
 .player-hp-label,
 .turn-label {
   flex: 0 0 auto;
-  color: #ddd9ed;
+  color: #e6e1d5;
   font-size: 0.72rem;
 }
 
 .turn-label {
   min-width: 78px;
-  color: #a393ff;
+  color: #ffd866;
   text-align: right;
 }
 
@@ -372,18 +370,18 @@ button {
   align-items: flex-start;
   gap: 10px;
   padding: 15px 16px;
-  border: 1px solid #2e2d45;
-  border-radius: 10px;
-  background: rgba(9, 11, 22, 0.7);
+  border: 2px solid #8e8879;
+  border-radius: 0;
+  background: #0a0a09;
 }
 
 .log-star {
-  color: #c0adff;
+  color: #ffd866;
 }
 
 .battle-log p {
   margin: 0;
-  color: #e5e2f1;
+  color: #f5f2eb;
   font-size: 0.9rem;
   line-height: 1.5;
 }
@@ -402,16 +400,16 @@ button {
 .action-button {
   min-height: 42px;
   padding: 9px 5px;
-  border-color: #47425f;
-  background: #201f35;
-  color: #ded9f3;
-  font-size: 0.82rem;
+  border-color: #8e8879;
+  background: #1b1a17;
+  color: #f5f2eb;
+  font-size: 0.77rem;
   font-weight: 600;
 }
 
 .action-button:hover:not(:disabled) {
-  border-color: #a393ff;
-  background: #302b4d;
+  border-color: #ffd866;
+  background: #302b1d;
 }
 
 .action-button:disabled {
@@ -420,29 +418,29 @@ button {
 }
 
 .action-button.accent {
-  border-color: #7a68d3;
-  background: #30284f;
-  color: #d1c6ff;
+  border-color: #d3a949;
+  background: #332b19;
+  color: #ffe9a8;
 }
 
 .controls-hint {
   margin: 14px 0 0;
-  color: #7f7d96;
+  color: #aaa394;
   font-size: 0.61rem;
   text-align: center;
 }
 
 kbd {
   padding: 2px 4px;
-  border: 1px solid #46445a;
-  border-radius: 4px;
-  color: #c9c4dc;
+  border: 1px solid #8e8879;
+  border-radius: 0;
+  color: #f5f2eb;
   font: inherit;
 }
 
 footer {
   margin-top: 17px;
-  color: #727087;
+  color: #8e8879;
   font-size: 0.75rem;
   text-align: center;
 }

@@ -96,12 +96,12 @@ const tutorialSteps = [
   },
   {
     title: "Stay on your feet",
-    copy: "Use an Item to restore up to 7 stardust (you have two). Defend slows your movement, but each hit costs less health.",
-    example: "You start with <strong>20 stardust</strong> · Regular hit: 2 · Defending hit: 1"
+    copy: "Use your one Starfruit to restore up to 7 stardust. Defend slows your movement, but each hit costs less health.",
+    example: "You start with <strong>16 stardust</strong> · Regular hit: 2 · Defending hit: 1"
   },
   {
     title: "Dodge the attack",
-    copy: "When the arena lights up, move your star out of the way until the 6-second attack ends. You can also tap or click a spot inside the arena to move there.",
+    copy: "When the arena lights up, move your star out of the way until the 7.5-second attack ends. Each challenger adds faster and denser patterns. You can also tap or click inside the arena to move.",
     example: "<kbd>↑</kbd> <kbd>↓</kbd> <kbd>←</kbd> <kbd>→</kbd> or <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd>"
   }
 ];
@@ -118,11 +118,11 @@ const state = {
   mode: "title",
   bossIndex: 0,
   bossHp: bosses[0].maxHp,
-  playerHp: 20,
-  maxPlayerHp: 20,
+  playerHp: 16,
+  maxPlayerHp: 16,
   rapport: 0,
   rapportNeeded: 2,
-  potions: 2,
+  potions: 1,
   tutorialStep: 0,
   player: { x: 400, y: 270 },
   bullets: [],
@@ -146,7 +146,8 @@ function setMessage(message) {
 function updateStatus() {
   const boss = currentBoss();
   bossName.textContent = boss.name;
-  bossCount.textContent = `BOSS ${Math.min(state.bossIndex + 1, bosses.length)} / ${bosses.length}`;
+  const heat = (1 + state.bossIndex * 0.14).toFixed(2);
+  bossCount.textContent = `BOSS ${Math.min(state.bossIndex + 1, bosses.length)} / ${bosses.length} · ${heat}x`;
   bossHpLabel.textContent = `${Math.max(0, state.bossHp)} / ${boss.maxHp}`;
   bossHpBar.style.width = `${Math.max(0, state.bossHp / boss.maxHp) * 100}%`;
   playerHpLabel.textContent = `${state.playerHp} / ${state.maxPlayerHp}`;
@@ -244,7 +245,7 @@ function act() {
   state.rapport = Math.min(state.rapportNeeded, state.rapport + 1);
   const response = currentBoss().response;
   const ready = state.rapport >= state.rapportNeeded ? " The challenger is ready to be spared!" : "";
-  startAttack(`${response}${ready} ${currentBoss().attack}`);
+  startAttack(`${currentBoss().act}: ${response}${ready} ${currentBoss().attack}`);
 }
 
 function useItem() {
@@ -319,7 +320,7 @@ function restart() {
   state.bossHp = bosses[0].maxHp;
   state.playerHp = state.maxPlayerHp;
   state.rapport = 0;
-  state.potions = 2;
+  state.potions = 1;
   state.bullets = [];
   state.defending = false;
   state.player.x = 400;
@@ -333,12 +334,12 @@ function restart() {
 }
 
 function drawBackground(time) {
-  context.fillStyle = "#090b16";
+  context.fillStyle = "#080808";
   context.fillRect(0, 0, canvas.width, canvas.height);
   for (const star of stars) {
     const glow = 0.35 + (Math.sin(time / 900 + star.phase) + 1) * 0.25;
     context.globalAlpha = glow;
-    context.fillStyle = "#c8c0ff";
+    context.fillStyle = "#aaa394";
     context.beginPath();
     context.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
     context.fill();
@@ -460,18 +461,18 @@ function drawBoss(time) {
 
   context.restore();
   context.shadowBlur = 0;
-  context.fillStyle = "#eeebfa";
-  context.font = "600 15px 'Space Grotesk', sans-serif";
+  context.fillStyle = "#fff4d1";
+  context.font = "bold 15px monospace";
   context.textAlign = "center";
   context.fillText(boss.title, 400, 165);
 }
 
 function drawArena() {
   context.save();
-  context.strokeStyle = state.mode === "attack" ? "#a393ff" : "#55516c";
-  context.lineWidth = 2;
-  context.shadowColor = "#8f7cf4";
-  context.shadowBlur = state.mode === "attack" ? 14 : 0;
+  context.strokeStyle = state.mode === "attack" ? "#ffd866" : "#d5d0c3";
+  context.lineWidth = 3;
+  context.shadowColor = "#ffd866";
+  context.shadowBlur = state.mode === "attack" ? 7 : 0;
   context.strokeRect(arenaBounds.left, arenaBounds.top, arenaBounds.right - arenaBounds.left, arenaBounds.bottom - arenaBounds.top);
   context.restore();
 
@@ -479,7 +480,7 @@ function drawArena() {
     for (const bullet of state.bullets) {
       context.save();
       context.shadowColor = bullet.color;
-      context.shadowBlur = 12;
+      context.shadowBlur = 5;
       context.fillStyle = bullet.color;
       context.beginPath();
       context.arc(bullet.x, bullet.y, bullet.radius, 0, Math.PI * 2);
@@ -488,30 +489,30 @@ function drawArena() {
     }
     if (state.invulnerable <= 0 || Math.floor(state.elapsed / 80) % 2 === 0) {
       context.save();
-      context.shadowColor = "#ff88b7";
-      context.shadowBlur = 18;
-      context.fillStyle = "#ff8fb7";
+      context.shadowColor = "#ff6d82";
+      context.shadowBlur = 8;
+      context.fillStyle = "#ff6d82";
       context.translate(state.player.x, state.player.y);
       context.rotate(Math.PI / 4);
       context.fillRect(-8, -8, 16, 16);
       context.restore();
     }
     context.fillStyle = "#c8c2db";
-    context.font = "12px 'DM Mono', monospace";
+    context.font = "bold 12px monospace";
     context.textAlign = "center";
-    context.fillText(`${Math.max(0, Math.ceil((6500 - state.elapsed) / 1000))}s`, 400, 352);
+    context.fillText(`${Math.max(0, Math.ceil((7500 - state.elapsed) / 1000))}s`, 400, 352);
   } else {
     context.save();
     context.globalAlpha = 0.75;
-    context.fillStyle = "#c8baff";
-    context.shadowColor = "#9c8bff";
-    context.shadowBlur = 16;
+    context.fillStyle = "#ffd866";
+    context.shadowColor = "#ffd866";
+    context.shadowBlur = 8;
     context.beginPath();
     context.arc(400, 262, 7, 0, Math.PI * 2);
     context.fill();
     context.restore();
-    context.fillStyle = "#807d96";
-    context.font = "11px 'DM Mono', monospace";
+    context.fillStyle = "#aaa394";
+    context.font = "bold 11px monospace";
     context.textAlign = "center";
     context.fillText("YOUR STAR", 400, 294);
   }
@@ -525,11 +526,12 @@ function draw() {
 }
 
 function spawnBullet(x, y, angle, speed, radius = 6) {
+  const difficulty = 1 + state.bossIndex * 0.14;
   state.bullets.push({
     x,
     y,
-    vx: Math.cos(angle) * speed,
-    vy: Math.sin(angle) * speed,
+    vx: Math.cos(angle) * speed * difficulty,
+    vy: Math.sin(angle) * speed * difficulty,
     radius,
     color: currentBoss().color
   });
@@ -544,33 +546,36 @@ function spawnPattern() {
   const pattern = currentBoss().pattern;
   if (pattern === "aimed") {
     aimAtPlayer(400, 151);
-    if (Math.floor(state.elapsed / 1300) % 2 === 1) {
-      aimAtPlayer(400, 151, -0.22);
-      aimAtPlayer(400, 151, 0.22);
+    if (state.bossIndex >= 1 && Math.floor(state.elapsed / 1200) % 2 === 1) {
+      aimAtPlayer(400, 151, -0.28);
+      aimAtPlayer(400, 151, 0.28);
     }
   } else if (pattern === "sides") {
     const fromLeft = Math.floor(state.elapsed / 850) % 2 === 0;
     const x = fromLeft ? arenaBounds.left - 4 : arenaBounds.right + 4;
     const direction = fromLeft ? 0 : Math.PI;
-    for (const offset of [-0.28, 0, 0.28]) {
+    const offsets = state.bossIndex >= 3 ? [-0.52, -0.26, 0, 0.26, 0.52] : [-0.28, 0, 0.28];
+    for (const offset of offsets) {
       spawnBullet(x, 260, direction + offset, 155);
     }
   } else if (pattern === "radial") {
     const rotation = (state.elapsed / 950) * 0.45;
-    for (let i = 0; i < 8; i += 1) {
-      spawnBullet(400, 152, rotation + (Math.PI * 2 * i) / 8, 125, 5);
+    const count = 8 + state.bossIndex;
+    for (let i = 0; i < count; i += 1) {
+      spawnBullet(400, 152, rotation + (Math.PI * 2 * i) / count, 125, 5);
     }
   } else if (pattern === "rain") {
     const x = arenaBounds.left + 12 + Math.random() * (arenaBounds.right - arenaBounds.left - 24);
     spawnBullet(x, arenaBounds.top - 4, Math.PI / 2 + (Math.random() - 0.5) * 0.35, 155, 5);
   } else {
-    aimAtPlayer(400, 151, -0.18);
-    aimAtPlayer(400, 151, 0.18);
+    aimAtPlayer(400, 151, -0.22);
+    aimAtPlayer(400, 151);
+    aimAtPlayer(400, 151, 0.22);
   }
 }
 
 function movePlayer(delta) {
-  const speed = state.defending ? 188 : 235;
+  const speed = state.defending ? 178 : 235;
   let dx = 0;
   let dy = 0;
   if (keys.has("ArrowLeft") || keys.has("a")) dx -= 1;
@@ -592,7 +597,14 @@ function updateAttack(delta) {
   state.invulnerable = Math.max(0, state.invulnerable - delta * 1000);
   movePlayer(delta);
 
-  const spawnDelay = currentBoss().pattern === "rain" ? 180 : currentBoss().pattern === "radial" ? 950 : 650;
+  const baseSpawnDelay = {
+    aimed: 610,
+    sides: 730,
+    radial: 1000,
+    rain: 245,
+    clock: 570
+  }[currentBoss().pattern];
+  const spawnDelay = baseSpawnDelay * (1 - state.bossIndex * 0.07);
   if (state.spawnElapsed >= spawnDelay) {
     spawnPattern();
     state.spawnElapsed = 0;
@@ -610,12 +622,12 @@ function updateAttack(delta) {
     const distance = Math.hypot(bullet.x - state.player.x, bullet.y - state.player.y);
     if (distance < bullet.radius + 9 && state.invulnerable <= 0) {
       state.playerHp = Math.max(0, state.playerHp - (state.defending ? 1 : 2));
-      state.invulnerable = 780;
+      state.invulnerable = 650;
       updateStatus();
     }
   }
 
-  if (state.elapsed >= 6500) finishAttack();
+  if (state.elapsed >= 7500) finishAttack();
 }
 
 function frame(time) {
